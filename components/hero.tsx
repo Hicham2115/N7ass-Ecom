@@ -6,7 +6,7 @@ export function Hero() {
   return (
     <section
       aria-labelledby="hero-title"
-      className="relative flex min-h-[clamp(560px,calc(100svh-135px),790px)] items-stretch overflow-hidden bg-[#f7f4ed] max-[700px]:min-h-[690px] max-[700px]:items-end"
+      className="relative flex min-h-[clamp(560px,calc(100svh-135px),790px)] items-stretch overflow-hidden bg-[#e9ddcf] max-[700px]:min-h-[690px] max-[700px]:items-end"
       id="home"
     >
       <div className="absolute inset-y-0 right-0 w-[64%] overflow-hidden bg-[#eee8dd] max-[700px]:inset-0 max-[700px]:w-full">
@@ -21,7 +21,7 @@ export function Hero() {
       </div>
       <div
         aria-hidden="true"
-        className="absolute inset-0 bg-[linear-gradient(90deg,#faf8f3_0%,rgba(250,248,243,.97)_32%,rgba(250,248,243,.82)_43%,rgba(250,248,243,.22)_61%,transparent_74%)] max-[700px]:bg-[linear-gradient(0deg,#faf8f3_0%,rgba(250,248,243,.96)_37%,rgba(250,248,243,.55)_59%,rgba(250,248,243,.05)_100%)]"
+        className="absolute inset-0 bg-[linear-gradient(90deg,rgba(233,221,207,.98)_0%,rgba(233,221,207,.94)_32%,rgba(233,221,207,.78)_43%,rgba(233,221,207,.22)_61%,transparent_74%)] max-[700px]:bg-[linear-gradient(0deg,rgba(233,221,207,.98)_0%,rgba(233,221,207,.96)_37%,rgba(233,221,207,.62)_59%,rgba(233,221,207,.08)_100%)]"
       />
       <div className="relative z-10 flex w-[57%] flex-col items-start justify-center py-[66px] pl-[max(11.5vw,calc((100vw-1500px)/2))] pr-0 max-[980px]:w-[62%] max-[980px]:pl-[8%] max-[700px]:w-full max-[700px]:px-[7%] max-[700px]:py-12">
         <p className="mb-0 text-[9px] font-bold uppercase leading-[1.7] tracking-[.19em] text-[#b87343] max-[700px]:max-w-[250px]">

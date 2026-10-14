@@ -37,12 +37,12 @@ a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visibl
 .brand-name { font-family: Georgia, "Times New Roman", serif; font-size: 34px; letter-spacing: .14em; line-height: 1; }
 .brand-lockup { flex-direction: column; }
 .eyebrow { margin: 0; color: var(--copper); font-size: 9px; font-weight: 700; letter-spacing: .19em; text-transform: uppercase; }
-.section-heading h2, .seasonal-copy h2, .services-copy h2, .review-copy h2, .faq-heading h2, .contact-copy h2 {
+.section-heading h2, .services-copy h2, .review-copy h2, .faq-heading h2, .contact-copy h2 {
   font-family: Georgia, "Times New Roman", serif;
   font-weight: 400;
   letter-spacing: -.045em;
 }
-.section-heading h2 em, .seasonal-copy h2 em, .services-copy h2 em, .review-copy h2 em, .faq-heading h2 em, .contact-copy h2 em { color: var(--copper); font-weight: 400; }
+.section-heading h2 em, .services-copy h2 em, .review-copy h2 em, .faq-heading h2 em, .contact-copy h2 em { color: var(--copper); font-weight: 400; }
 .button { display: inline-flex; min-height: 46px; align-items: center; justify-content: center; gap: 14px; padding: 0 20px; font-size: 10px; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; transition: background .2s ease, color .2s ease; }
 .button-copper { border: 1px solid var(--copper); color: white; background: var(--copper); }
 .button-copper:hover { color: white; background: #985c35; }
@@ -57,13 +57,6 @@ a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visibl
 .product-photo img { object-fit: cover; transition: transform .55s cubic-bezier(.2,.7,.2,1); }
 .product-item:hover img { transform: scale(1.04); }
 .product-open { position: absolute; right: 11px; bottom: 11px; display: grid; width: 33px; height: 33px; place-items: center; border-radius: 50%; color: white; background: var(--copper); }
-
-.seasonal-section { position: relative; display: flex; min-height: 365px; align-items: center; overflow: hidden; background: #e7dfd2; }
-.seasonal-photo { object-fit: cover; object-position: center 48%; }
-.seasonal-wash { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(247,244,237,.98) 0%, rgba(247,244,237,.94) 34%, rgba(247,244,237,.46) 58%, rgba(247,244,237,.04) 100%); }
-.seasonal-copy { position: relative; z-index: 1; max-width: 570px; padding: 52px 7.2%; }
-.seasonal-copy h2 { margin: 15px 0 14px; font-size: clamp(40px, 4.5vw, 61px); line-height: 1; }
-.seasonal-copy > p:not(.eyebrow) { max-width: 360px; margin: 0 0 23px; color: #625d55; font-size: 12px; line-height: 1.8; }
 
 .featured-section { background: #eee8dd; }
 .product-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 17px; }
@@ -155,11 +148,6 @@ a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visibl
   .section-heading { align-items: flex-start; margin-bottom: 20px; }
   .section-heading h2 { font-size: 34px; }
   .text-link { margin-top: 22px; font-size: 9px; }
-  .seasonal-section { min-height: 420px; align-items: flex-end; }
-  .seasonal-photo { object-position: 64% center; }
-  .seasonal-wash { background: linear-gradient(0deg, rgba(247,244,237,.98) 0%, rgba(247,244,237,.9) 47%, rgba(247,244,237,.05) 100%); }
-  .seasonal-copy { padding: 45px 7% 34px; }
-  .seasonal-copy h2 { font-size: 43px; }
   .product-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 23px 12px; }
   .product-item h3 { font-size: 16px; }
   .product-open { opacity: 1; transform: none; }
