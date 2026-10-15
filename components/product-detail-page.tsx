@@ -17,6 +17,7 @@ import {
   ShoppingBag,
   Star,
   Truck,
+  X,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
@@ -322,11 +323,11 @@ export function ProductDetailPage({ product }: { product: Product }) {
       </div>
 
       <Dialog open={zoomOpen} onOpenChange={setZoomOpen}>
-        <DialogContent aria-describedby="product-image-description" className="inset-[4vh_4vw] h-[92vh] max-h-none w-[92vw] max-w-none border-0 bg-[#211f1b] p-3 sm:p-4">
+        <DialogContent aria-describedby="product-image-description" className="inset-[4vh_4vw] h-[92vh] max-h-none w-[92vw] max-w-none border-0 bg-[#211f1b] p-3 sm:p-4 max-[640px]:p-2" mobileSide="full">
           <DialogTitle className="sr-only">Photo de {product.name}</DialogTitle>
           <DialogDescription className="sr-only" id="product-image-description">Vue agrandie de {product.name}.</DialogDescription>
           <DialogClose aria-label="Fermer l’agrandissement" className="absolute right-3 top-3 z-10 grid size-10 place-items-center bg-[#fcfaf6] text-[#211f1b] hover:bg-white">
-            <ChevronLeft aria-hidden="true" className="size-4" />
+            <X aria-hidden="true" className="size-5" />
           </DialogClose>
           <div className="relative min-h-0 flex-1">
             <Image alt={gallery[activeImage].alt} className="object-contain" fill sizes="92vw" src={gallery[activeImage].src} />

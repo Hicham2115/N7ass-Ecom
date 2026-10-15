@@ -28,7 +28,7 @@ export function SeasonalFeatureSection() {
         className="pointer-events-none absolute inset-0 bg-gradient-to-r from-[#f1e7dc]/55 via-[#f1e7dc]/15 to-transparent max-[700px]:bg-[linear-gradient(to_top,rgba(241,231,220,.96)_0%,rgba(241,231,220,.9)_34%,rgba(241,231,220,.56)_58%,rgba(241,231,220,.14)_78%,transparent_100%)]"
       />
       <div className="relative z-10 w-[43%] max-w-[500px] py-14 pl-[6.5%] pr-0 max-[980px]:w-[48%] max-[700px]:w-full max-[700px]:max-w-none max-[700px]:px-[7%] max-[700px]:pb-10 max-[700px]:pt-20">
-        <p className="m-0 text-[clamp(13px,0.9vw,15px)] font-bold uppercase tracking-[0.17em] text-[#a76f49]">
+        <p className="m-0 text-[clamp(13px,0.9vw,15px)] font-bold uppercase tracking-[0.17em] text-[#a76f49] max-[700px]:hidden">
           La sélection de saison
         </p>
         <h2
