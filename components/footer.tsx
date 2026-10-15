@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight, Sparkles } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 const footerLinks = [
   { title: "Shop", links: [["All objects", "#categories"], ["Lighting", "#categories"], ["Bathroom & spa", "#categories"], ["Garden & outdoor", "#categories"]] },
@@ -12,7 +12,7 @@ export function Footer() {
       <div className="footer-main">
         <div className="footer-brand">
           <Link className="brand-lockup footer-lockup" href="#home">
-            <span className="footer-symbol"><Sparkles aria-hidden="true" size={19} /></span>
+            <span aria-hidden="true" className="mb-0 h-px w-8 bg-[#d5a27c]" />
             <span className="brand-name">CUVEROO</span>
           </Link>
           <p>Authentic copper.<br />Timeless design.</p>

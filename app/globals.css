@@ -4,6 +4,10 @@
 
 @custom-variant dark (&:is(.dark *));
 
+@keyframes cuveroo-marquee {
+  to { transform: translateX(-50%); }
+}
+
 :root {
   --paper: #f7f4ed;
   --paper-light: #fcfaf6;
@@ -126,7 +130,6 @@ a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visibl
 .footer-main { display: grid; grid-template-columns: 1.15fr .75fr .85fr 1fr; gap: 36px; padding-bottom: 40px; }
 .footer-lockup { align-items: flex-start; color: var(--paper-light); }
 .footer-lockup .brand-name { margin-top: 10px; font-size: 22px; }
-.footer-symbol { color: var(--copper-light); }
 .footer-brand > p { margin: 14px 0 0; color: #b8afa2; font-family: Georgia, "Times New Roman", serif; font-size: 14px; line-height: 1.6; }
 .footer-main nav h2 { margin: 0 0 16px; color: var(--copper-light); font-size: 9px; letter-spacing: .16em; text-transform: uppercase; }
 .footer-main nav ul { display: grid; gap: 10px; margin: 0; padding: 0; list-style: none; }
