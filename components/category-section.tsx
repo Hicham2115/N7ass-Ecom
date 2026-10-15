@@ -60,10 +60,10 @@ export function CategorySection() {
           </span>
         </div>
         <Link
-          className="col-start-3 inline-flex items-center justify-self-end gap-1.5 whitespace-nowrap text-[10px] font-semibold uppercase tracking-[0.08em] text-[#a76f49] transition-colors hover:text-[#211f1b]"
+          className="group col-start-3 inline-flex items-center justify-self-end gap-1.5 whitespace-nowrap text-[10px] font-semibold uppercase tracking-[0.08em] text-[#a76f49] transition-colors hover:text-[#211f1b]"
           href="#featured"
         >
-          Explore all <MoveRight aria-hidden="true" size={14} strokeWidth={1.5} />
+          Explore all <MoveRight aria-hidden="true" className="transition-transform duration-200 group-hover:translate-x-1" size={14} strokeWidth={1.5} />
         </Link>
       </div>
 
