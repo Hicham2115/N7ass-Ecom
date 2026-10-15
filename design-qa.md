@@ -19,3 +19,18 @@
 ## Final result
 
 blocked
+
+---
+
+# Product collection and shopping controls check
+
+- Preview: `http://127.0.0.1:3000/products`
+- Viewport: desktop in the Codex in-app browser.
+- Visible: collection filters and product grid, header saved-items heart, and shopping-bag icon.
+- Verified: `npx tsc --noEmit` and `git diff --check` pass.
+- Interaction check: blocked. The browser rendered the latest UI but did not reflect clicks in filter or drawer state; no corresponding browser console errors were reported. Cart, favorites, and mobile drawer behavior need a responsive browser session that dispatches app events correctly.
+- Data note: product names, availability, categories, and prices are local sample catalog data.
+
+## Final result
+
+blocked
