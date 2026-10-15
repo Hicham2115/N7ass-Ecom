@@ -39,13 +39,13 @@ export function Hero() {
               <br />
               for Modern Living
             </h1>
-            <p className="mb-7 max-w-[440px] text-[15px] leading-[1.72] text-[#4c4842] max-[700px]:mb-[19px] max-[700px]:max-w-[350px] max-[700px]:text-xs">
+            <p className="mb-7 max-w-[440px] text-[13px] leading-[1.72] text-[#4c4842] max-[700px]:mb-[19px] max-[700px]:max-w-[350px] max-[700px]:text-xs">
               Artisanal lighting and home decor, meticulously handcrafted in
               Morocco. Created for homes and hospitality spaces that value
               authenticity, craftsmanship and lasting beauty.
             </p>
             <Link
-              className="inline-flex min-h-12 items-center justify-center gap-5 border border-[#b87343] bg-[#b87343] px-9 text-xs font-bold uppercase tracking-[.07em] text-white transition-colors hover:bg-[#985c35] max-[700px]:px-6"
+              className="inline-flex min-h-12 items-center justify-center gap-5 border border-[#b87343] bg-[#b87343] px-9 text-[10px] font-bold uppercase tracking-[.07em] text-white transition-colors hover:bg-[#985c35] max-[700px]:px-6"
               href="#categories"
             >
               Shop the collection <ArrowRight aria-hidden="true" size={16} />

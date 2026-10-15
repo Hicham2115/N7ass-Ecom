@@ -31,13 +31,13 @@ export function SeasonalFeatureSection() {
           <br />
           Last Longer
         </h2>
-        <p className="mb-6 max-w-[390px] text-[15px] leading-[1.45] text-[#514a42]">
+        <p className="mb-6 max-w-[390px] text-[13px] leading-[1.65] text-[#514a42]">
           Hand-hammered textures. Organic forms. Enduring design. Our curated edit
           brings together timeless pieces that add warmth, character and soul to
           your space.
         </p>
         <Link
-          className="inline-flex min-h-[52px] items-center justify-center gap-4 bg-[#b87343] px-7 text-[11px] font-bold uppercase tracking-[0.08em] text-white transition-colors hover:bg-[#985c35]"
+          className="inline-flex min-h-[52px] items-center justify-center gap-4 bg-[#b87343] px-7 text-[10px] font-bold uppercase tracking-[0.08em] text-white transition-colors hover:bg-[#985c35]"
           href="#featured"
         >
           Explore the edit <ArrowRight aria-hidden="true" size={16} />

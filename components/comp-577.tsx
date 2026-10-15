@@ -29,7 +29,7 @@ export default function Component() {
             >
               {navigationLinks.map((link) => (
                 <Link
-                  className="border-b border-[#ddd4c7] py-3 text-[11px] uppercase transition-colors hover:text-[#b87343] last:border-b-0"
+                  className="border-b border-[#ddd4c7] py-3 text-[10px] uppercase transition-colors hover:text-[#b87343] last:border-b-0"
                   href={link.href}
                   key={link.label}
                 >
@@ -81,8 +81,8 @@ export default function Component() {
           <Link
             className={
               index === 0
-                ? "relative flex min-h-[53px] items-center text-[11px] font-bold uppercase tracking-[.045em] text-[#b87343] transition-all duration-300 hover:-translate-y-px after:absolute after:inset-x-0 after:bottom-[7px] after:h-0.5 after:origin-left after:bg-[#b87343] after:content-[''] max-[980px]:text-[10px]"
-                : "relative flex min-h-[53px] items-center text-[11px] font-bold uppercase tracking-[.045em] text-[#3e3b37] transition-all duration-300 hover:-translate-y-px hover:text-[#b87343] after:absolute after:bottom-[7px] after:left-0 after:right-0 after:h-0.5 after:origin-left after:scale-x-0 after:bg-[#b87343] after:transition-transform after:duration-300 after:content-[''] hover:after:scale-x-100 focus-visible:after:scale-x-100 max-[980px]:text-[10px] motion-reduce:transition-none motion-reduce:after:transition-none"
+                ? "relative flex min-h-[53px] items-center text-[10px] font-bold uppercase tracking-[.045em] text-[#b87343] transition-colors duration-200 after:absolute after:inset-x-0 after:bottom-[7px] after:h-0.5 after:origin-left after:bg-[#b87343] after:content-['']"
+                : "relative flex min-h-[53px] items-center text-[10px] font-bold uppercase tracking-[.045em] text-[#3e3b37] transition-colors duration-200 hover:text-[#b87343] after:absolute after:bottom-[7px] after:left-0 after:right-0 after:h-0.5 after:origin-left after:scale-x-0 after:bg-[#b87343] after:transition-transform after:duration-200 after:content-[''] hover:after:scale-x-100 focus-visible:after:scale-x-100 motion-reduce:transition-none motion-reduce:after:transition-none"
             }
             href={link.href}
             key={link.label}
