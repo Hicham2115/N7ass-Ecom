@@ -1,4 +1,4 @@
-const message = "Handcrafted copper · Made in Morocco · Timeless by design";
+const message = "Cuivre façonné à la main · Fabriqué au Maroc · Un design intemporel";
 
 function MessageGroup() {
   return (
@@ -14,7 +14,7 @@ function MessageGroup() {
 export function AnnouncementBar() {
   return (
     <div className="overflow-hidden bg-[#211f1b] py-[9px]" aria-label="Cuveroo announcement">
-      <p className="sr-only">Handcrafted copper, made in Morocco. Timeless by design.</p>
+      <p className="sr-only">Cuivre façonné à la main, fabriqué au Maroc. Un design intemporel.</p>
       <div className="flex w-max animate-[cuveroo-marquee_30s_linear_infinite] motion-reduce:hidden hover:[animation-play-state:paused]">
         <MessageGroup />
         <span aria-hidden="true">

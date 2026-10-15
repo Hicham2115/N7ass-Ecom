@@ -14,7 +14,7 @@ type Review = {
 
 function Stars({ rating }: { rating: number }) {
   return (
-    <span className="inline-flex gap-[3px] text-[#b87343]" role="img" aria-label={`${rating} out of 5 stars`}>
+    <span className="inline-flex gap-[3px] text-[#b87343]" role="img" aria-label={`${rating} étoiles sur 5`}>
       {Array.from({ length: 5 }, (_, index) => (
         <Star
           aria-hidden="true"
@@ -59,7 +59,7 @@ export function ReviewsCarousel({ reviews }: { reviews: Review[] }) {
   }
 
   return (
-    <div className="mt-2" role="region" aria-roledescription="carousel" aria-label="Customer reviews">
+    <div className="mt-2" role="region" aria-roledescription="carrousel" aria-label="Avis clients">
       <div
         className="flex snap-x snap-mandatory gap-4 overflow-x-auto scroll-smooth [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
         onScroll={updatePage}
@@ -71,7 +71,7 @@ export function ReviewsCarousel({ reviews }: { reviews: Review[] }) {
             key={review.initials}
             role="group"
             aria-roledescription="slide"
-            aria-label={`${index + 1} of ${reviews.length}`}
+            aria-label={`${index + 1} sur ${reviews.length}`}
           >
             <div className="mb-6 flex items-center justify-between gap-4">
               <div className="flex min-w-0 items-center gap-3">
@@ -93,7 +93,7 @@ export function ReviewsCarousel({ reviews }: { reviews: Review[] }) {
             </p>
             <div className="mt-6 flex items-center gap-2 border-t border-[#e6dfd6] pt-4 text-[clamp(11px,0.78vw,13px)] font-semibold uppercase tracking-[.13em] text-[#a4613a]">
               <span className="h-1.5 w-1.5 rounded-full bg-[#b87343]" aria-hidden="true" />
-              Cuveroo customer
+              Client Cuveroo
             </div>
           </article>
         ))}
@@ -105,7 +105,7 @@ export function ReviewsCarousel({ reviews }: { reviews: Review[] }) {
         </p>
         <div className="flex items-center gap-2">
           <Button
-            aria-label="Previous reviews"
+            aria-label="Avis précédents"
             className="h-9 w-9 rounded-full border-[#d8cbbd] bg-transparent text-[#593a27] shadow-none hover:border-[#b87343] hover:bg-[#b87343] hover:text-white"
             disabled={page === 0}
             onClick={() => movePage(-1)}
@@ -115,7 +115,7 @@ export function ReviewsCarousel({ reviews }: { reviews: Review[] }) {
             <ChevronLeft aria-hidden="true" size={17} />
           </Button>
           <Button
-            aria-label="Next reviews"
+            aria-label="Avis suivants"
             className="h-9 w-9 rounded-full border-[#d8cbbd] bg-transparent text-[#593a27] shadow-none hover:border-[#b87343] hover:bg-[#b87343] hover:text-white"
             disabled={page >= pageCount - 1}
             onClick={() => movePage(1)}

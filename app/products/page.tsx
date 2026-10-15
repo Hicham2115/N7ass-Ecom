@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import { ProductsCatalog } from "@/components/products-catalog";
 
 export const metadata: Metadata = {
-  title: "Our Collection | Cuveroo",
-  description: "Explore handcrafted copper lighting, home accents, and outdoor pieces made in Morocco.",
+  title: "La collection | Cuveroo",
+  description: "Découvrez nos luminaires, objets de décoration et pièces d’extérieur en cuivre, fabriqués à la main au Maroc.",
 };
 
 export default function ProductsPage() {

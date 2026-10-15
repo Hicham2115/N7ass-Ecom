@@ -10,7 +10,7 @@ export function Hero() {
       id="home"
     >
       <Image
-        alt="Hand-hammered copper pendant in a sunlit room with an olive branch and stone console"
+        alt="Suspension en cuivre martelé dans un intérieur ensoleillé, près d’une branche d’olivier et d’une console en pierre"
         className="animate-[cuveroo-image-arrive_1400ms_cubic-bezier(.2,.7,.2,1)_both] object-cover object-left motion-reduce:animate-none max-[700px]:[object-position:68%_35%]"
         fill
         priority
@@ -29,26 +29,26 @@ export function Hero() {
           />
           <div className="relative z-10">
             <p className="mb-0 animate-[cuveroo-fade-up_850ms_cubic-bezier(.22,1,.36,1)_120ms_both] text-[clamp(11px,0.78vw,13px)] font-bold uppercase leading-[1.7] tracking-[.19em] text-[#b87343] motion-reduce:animate-none max-[700px]:max-w-[250px]">
-              Handcrafted for meaningful spaces
+              Façonné à la main pour des lieux qui ont une âme
             </p>
             <h1
               className="mb-[18px] mt-[23px] max-w-[690px] animate-[cuveroo-fade-up_1000ms_cubic-bezier(.22,1,.36,1)_260ms_both] font-[Georgia,Times_New_Roman,serif] text-[clamp(48px,4.15vw,78px)] font-normal leading-[.99] tracking-[-.045em] text-[#211f1b] motion-reduce:animate-none max-[700px]:mb-3 max-[700px]:mt-[13px] max-[700px]:text-[clamp(42px,10.3vw,58px)]"
               id="hero-title"
             >
-              Timeless Copper
+              Le cuivre intemporel
               <br />
-              for Modern Living
+              pour un art de vivre moderne
             </h1>
             <p className="mb-7 max-w-[440px] animate-[cuveroo-fade-up_900ms_cubic-bezier(.22,1,.36,1)_470ms_both] text-[clamp(15px,1.05vw,17px)] leading-[1.72] text-[#4c4842] motion-reduce:animate-none max-[700px]:mb-[19px] max-[700px]:max-w-[350px] max-[700px]:text-[14px]">
-              Artisanal lighting and home decor, meticulously handcrafted in
-              Morocco. Created for homes and hospitality spaces that value
-              authenticity, craftsmanship and lasting beauty.
+              Luminaires et objets de décoration façonnés avec soin au Maroc.
+              Des créations pour les intérieurs et les lieux d’accueil qui
+              aiment l’authenticité, le savoir-faire et la beauté durable.
             </p>
             <Link
               className="inline-flex min-h-12 animate-[cuveroo-fade-up_850ms_cubic-bezier(.22,1,.36,1)_650ms_both] items-center justify-center gap-5 border border-[#b87343] bg-[#b87343] px-9 text-[clamp(12px,0.85vw,14px)] font-bold uppercase tracking-[.07em] text-white transition-colors hover:bg-[#985c35] motion-reduce:animate-none max-[700px]:px-6"
               href="#categories"
             >
-              Shop the collection <ArrowRight aria-hidden="true" size={16} />
+              Découvrir la collection <ArrowRight aria-hidden="true" size={16} />
             </Link>
           </div>
         </div>

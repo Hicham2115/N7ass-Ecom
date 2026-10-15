@@ -5,21 +5,21 @@ import { CurrentYear } from "./current-year";
 
 const footerLinks = [
   {
-    title: "Shop",
+    title: "Boutique",
     links: [
-      ["All objects", "/products"],
-      ["Lighting", "/products"],
-      ["Bathroom & spa", "/products"],
-      ["Garden & outdoor", "/products"],
+      ["Toutes les pièces", "/products"],
+      ["Luminaires", "/products"],
+      ["Bain & bien-être", "/products"],
+      ["Jardin & extérieur", "/products"],
     ],
   },
   {
-    title: "Customer care",
+    title: "À votre écoute",
     links: [
-      ["Contact us", "/#contact"],
-      ["Frequently asked questions", "/#faq-title"],
-      ["Our craft", "/#story"],
-      ["Wholesale & custom", "/#custom"],
+      ["Nous contacter", "/#contact"],
+      ["Questions fréquentes", "/#faq-title"],
+      ["Notre savoir-faire", "/#story"],
+      ["Sur mesure & professionnels", "/#custom"],
     ],
   },
 ];
@@ -47,11 +47,11 @@ export function Footer() {
               </span>
             </Link>
             <p className="mb-0 mt-5 max-w-[285px] text-[15px] leading-7 text-[#c6bdb2]">
-              Hand-finished copper, made with care in Morocco for the spaces we
-              call home.
+              Du cuivre travaillé à la main au Maroc, avec soin, pour les lieux
+              que nous aimons.
             </p>
             <p className="mb-0 mt-5 text-[11px] font-semibold uppercase tracking-[.16em] text-[#9d623d]">
-              Made by hand. Made to last.
+              Fait main. Fait pour durer.
             </p>
           </div>
 
@@ -77,17 +77,17 @@ export function Footer() {
 
           <div>
             <h2 className="mb-3 mt-1 text-[13px] font-semibold tracking-[.01em] text-[#f8f5ef]">
-              Keep in touch
+              Restons en contact
             </h2>
             <p className="mb-5 mt-0 max-w-[300px] text-[14px] leading-6 text-[#c6bdb2]">
-              Have a question about a piece or a project? We’d be glad to hear
-              from you.
+              Une question sur une pièce ou un projet ? Nous serons ravis de
+              vous répondre.
             </p>
             <Link
               className="group flex min-h-[52px] max-w-[370px] items-center justify-between rounded-full border border-[#55483c] bg-[#302a24] py-1 pl-5 pr-1 text-[14px] text-[#ded5ca] transition-colors duration-200 hover:border-[#80634e] hover:bg-[#383129] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#d5a27c]"
               href="/#contact"
             >
-              <span>Contact Cuveroo</span>
+              <span>Contacter Cuveroo</span>
               <span className="grid size-11 place-items-center rounded-full bg-[#d5a27c] text-[#241f1a] transition-colors duration-200 group-hover:bg-[#e0ad83]">
                 <ArrowRight aria-hidden="true" size={18} />
               </span>
@@ -97,9 +97,9 @@ export function Footer() {
 
         <div className="flex items-center justify-between gap-4 border-t border-[#443a31] pt-6 text-[12px] text-[#b6aa9d] max-[520px]:flex-col max-[520px]:items-start max-[520px]:gap-2">
           <span>
-            © <CurrentYear /> Cuveroo. All rights reserved.
+            © <CurrentYear /> Cuveroo. Tous droits réservés.
           </span>
-          <span>Objects for living · Crafted in Morocco</span>
+          <span>Des objets à vivre · Façonnés au Maroc</span>
         </div>
       </div>
 
@@ -112,7 +112,7 @@ export function Footer() {
         </span>
       </div>
       <p className="mx-auto max-w-[1440px] px-6 py-4 text-center text-[12px] text-white/70 sm:px-8 lg:px-12">
-        Designed &amp; developed by{" "}
+        Conçu &amp; développé par{" "}
         <a
           href="https://www.stallionadvertising.ma/"
           target="_blank"

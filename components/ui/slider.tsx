@@ -16,12 +16,12 @@ function Slider({ className, ...props }: React.ComponentProps<typeof SliderPrimi
         <SliderPrimitive.Range className="absolute h-full bg-[#a9653e]" data-slot="slider-range" />
       </SliderPrimitive.Track>
       <SliderPrimitive.Thumb
-        aria-label="Minimum price"
+        aria-label="Prix minimum"
         className="block size-4 rounded-full border-2 border-[#fcfaf6] bg-[#a9653e] shadow-[0_0_0_1px_#a9653e] outline-none transition-transform hover:scale-110 focus-visible:ring-2 focus-visible:ring-[#b87343]/35"
         data-slot="slider-thumb"
       />
       <SliderPrimitive.Thumb
-        aria-label="Maximum price"
+        aria-label="Prix maximum"
         className="block size-4 rounded-full border-2 border-[#fcfaf6] bg-[#a9653e] shadow-[0_0_0_1px_#a9653e] outline-none transition-transform hover:scale-110 focus-visible:ring-2 focus-visible:ring-[#b87343]/35"
         data-slot="slider-thumb"
       />

@@ -4,34 +4,34 @@ import { ArrowLeft, ArrowRight, MoveRight } from "lucide-react";
 
 const categories = [
   {
-    name: "Lighting",
-    note: "Pendant lights, table lamps and more",
+    name: "Luminaires",
+    note: "Suspensions, lampes à poser et plus encore",
     image: "/cu/category-lighting.png",
-    alt: "Perforated hammered copper pendant lamp",
+    alt: "Lampe à suspension en cuivre martelé et ajouré",
   },
   {
-    name: "Wall decor",
-    note: "Statement pieces for your walls",
+    name: "Décoration murale",
+    note: "Des pièces de caractère pour vos murs",
     image: "/cu/category-wall-decor.png",
-    alt: "Ornate hammered copper wall plate",
+    alt: "Plaque murale en cuivre martelé et ornementé",
   },
   {
-    name: "Bathroom",
-    note: "Sinks and accessories for serene spaces",
+    name: "Salle de bain",
+    note: "Vasques et accessoires pour un espace apaisant",
     image: "/cu/category-bathroom.png",
-    alt: "Handmade copper basin with a brass faucet",
+    alt: "Vasque en cuivre faite à la main avec robinet en laiton",
   },
   {
-    name: "Tableware",
-    note: "Elevate everyday moments",
+    name: "Art de la table",
+    note: "Sublimez les gestes du quotidien",
     image: "/cu/category-tableware.png",
-    alt: "Hammered copper vase and cup on a tray",
+    alt: "Vase et gobelet en cuivre martelé sur un plateau",
   },
   {
-    name: "Garden & outdoor",
-    note: "Fire bowls and outdoor decor",
+    name: "Jardin & extérieur",
+    note: "Braseros et objets pour l’extérieur",
     image: "/cu/category-garden.png",
-    alt: "Copper fire bowl in an outdoor setting",
+    alt: "Brasero en cuivre installé en plein air",
   },
 ];
 
@@ -52,7 +52,7 @@ export function CategorySection() {
             className="whitespace-nowrap font-sans text-[clamp(15px,1.05vw,17px)] font-medium uppercase tracking-[0.1em] text-[#211f1b] sm:text-[17px] sm:tracking-[0.12em]"
             id="categories-title"
           >
-            Shop by category
+            Nos univers
           </h2>
           <span className="hidden items-center gap-1 text-[#b87343] sm:flex" aria-hidden="true">
             <ArrowLeft size={11} strokeWidth={1.5} />
@@ -63,7 +63,7 @@ export function CategorySection() {
           className="group col-start-3 inline-flex items-center justify-self-end gap-1.5 whitespace-nowrap text-[clamp(12px,0.85vw,14px)] font-semibold uppercase tracking-[0.08em] text-[#a76f49] transition-colors hover:text-[#211f1b]"
           href="/products"
         >
-          Explore all <MoveRight aria-hidden="true" className="transition-transform duration-200 group-hover:translate-x-1" size={14} strokeWidth={1.5} />
+          Tout découvrir <MoveRight aria-hidden="true" className="transition-transform duration-200 group-hover:translate-x-1" size={14} strokeWidth={1.5} />
         </Link>
       </div>
 

@@ -9,7 +9,7 @@ export function SeasonalFeatureSection() {
       aria-labelledby="seasonal-title"
     >
       <Image
-        alt="Sunlit dining room with a copper pendant and tableware"
+        alt="Salle à manger ensoleillée avec suspension et objets de table en cuivre"
         className="object-cover object-center max-[700px]:object-[68%_center]"
         fill
         sizes="100vw"
@@ -21,26 +21,26 @@ export function SeasonalFeatureSection() {
       />
       <div className="relative z-10 w-[43%] max-w-[500px] py-14 pl-[6.5%] pr-0 max-[980px]:w-[48%] max-[700px]:w-full max-[700px]:max-w-none max-[700px]:px-[7%] max-[700px]:pb-10 max-[700px]:pt-20">
         <p className="m-0 text-[clamp(13px,0.9vw,15px)] font-bold uppercase tracking-[0.17em] text-[#a76f49]">
-          The seasonal edit
+          La sélection de saison
         </p>
         <h2
           className="mb-5 mt-4 font-[Georgia,Times_New_Roman,serif] text-[clamp(42px,4.1vw,60px)] font-normal leading-[1.06] tracking-[-0.045em] text-[#211f1b] max-[700px]:text-[46px]"
           id="seasonal-title"
         >
-          Warm Spaces
+          Des espaces chaleureux
           <br />
-          Last Longer
+          pour longtemps
         </h2>
         <p className="mb-6 max-w-[390px] text-[clamp(15px,1.05vw,17px)] leading-[1.65] text-[#514a42]">
-          Hand-hammered textures. Organic forms. Enduring design. Our curated edit
-          brings together timeless pieces that add warmth, character and soul to
-          your space.
+          Des textures martelées à la main, des formes organiques et un design
+          durable. Une sélection de pièces intemporelles qui apportent chaleur,
+          caractère et âme à votre intérieur.
         </p>
         <Link
           className="inline-flex min-h-[52px] items-center justify-center gap-4 bg-[#b87343] px-7 text-[clamp(12px,0.85vw,14px)] font-bold uppercase tracking-[0.08em] text-white transition-colors hover:bg-[#985c35]"
           href="#featured"
         >
-          Explore the edit <ArrowRight aria-hidden="true" size={16} />
+          Explorer la sélection <ArrowRight aria-hidden="true" size={16} />
         </Link>
       </div>
     </section>

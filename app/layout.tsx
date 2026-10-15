@@ -18,14 +18,14 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Cuveroo — Timeless Copper, Crafted by Hand",
+  title: "Cuveroo — Le cuivre intemporel, façonné à la main",
   description:
-    "Discover Cuveroo's handcrafted copper lighting, bath pieces, and objects for a more considered home.",
+    "Découvrez les luminaires, pièces de bain et objets en cuivre façonnés à la main au Maroc par Cuveroo.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
+    <html lang="fr-MA" className={`${geistSans.variable} ${geistMono.variable}`}>
       <body>
         <ShopProvider>
           <SmoothScroll>

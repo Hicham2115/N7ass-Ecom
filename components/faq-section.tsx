@@ -3,29 +3,29 @@ import { ArrowRight, Minus, Plus } from "lucide-react";
 
 const questions = [
   {
-    question: "What can I find in the Cuveroo collection?",
+    question: "Que trouve-t-on dans la collection Cuveroo ?",
     answer:
-      "Lighting, decorative accents, bathroom and spa pieces, mirrors, wall art, and garden objects.",
+      "Des luminaires, objets décoratifs, pièces pour la salle de bain et le spa, miroirs, décorations murales et objets de jardin.",
   },
   {
-    question: "Can I ask for a custom piece?",
+    question: "Puis-je demander une pièce sur mesure ?",
     answer:
-      "Yes. Cuveroo welcomes custom enquiries. Share a few details about your idea in the contact section.",
+      "Oui. Cuveroo réalise des pièces sur mesure. Décrivez-nous votre idée dans la section contact.",
   },
   {
-    question: "Can I choose a finish or size?",
+    question: "Puis-je choisir une finition ou des dimensions ?",
     answer:
-      "Custom sizing and finish options can depend on the piece. Tell us what you have in mind and we’ll guide you through the possibilities.",
+      "Les dimensions et les finitions possibles dépendent de la pièce. Parlez-nous de votre projet et nous vous guiderons parmi les options.",
   },
   {
-    question: "Do you work with wholesale buyers?",
+    question: "Travaillez-vous avec des professionnels et des revendeurs ?",
     answer:
-      "Cuveroo offers wholesale enquiries. Use the contact section to start a conversation.",
+      "Nous étudions les demandes des professionnels et les commandes en gros. Utilisez le formulaire de contact pour nous en parler.",
   },
   {
-    question: "How should I care for a copper piece?",
+    question: "Comment entretenir une pièce en cuivre ?",
     answer:
-      "Care can depend on the object and its finish. Contact Cuveroo for guidance on a specific piece.",
+      "L’entretien dépend de l’objet et de sa finition. Contactez Cuveroo pour obtenir des conseils adaptés à votre pièce.",
   },
 ];
 
@@ -39,25 +39,25 @@ export function FaqSection() {
         <div className="flex flex-col items-start gap-8">
           <div className="max-w-[500px]">
             <p className="m-0 text-[clamp(11px,0.78vw,13px)] font-bold uppercase tracking-[.19em] text-[#b87343]">
-              Good to know
+              Bon à savoir
             </p>
             <h2
               className="mb-0 mt-4 font-sans text-[clamp(38px,4vw,56px)] font-semibold leading-[1.04] tracking-[-.05em] text-[#211f1b]"
               id="faq-title"
             >
-              Questions about our craft.
+              Vos questions sur notre savoir-faire.
             </h2>
           </div>
           <div className="max-w-[440px] border-t border-[#d9cfc0] pt-5">
             <p className="mb-5 mt-0 text-[14px] leading-[1.7] text-[#655f58]">
-              From choosing a finish to caring for copper, find a few useful
-              answers here.
+              Du choix d’une finition à l’entretien du cuivre, retrouvez ici
+              quelques réponses utiles.
             </p>
             <Link
               className="group inline-flex min-h-[46px] items-center justify-center gap-[14px] border border-[#b87343] bg-[#b87343] px-5 text-[clamp(12px,0.85vw,14px)] font-bold uppercase tracking-[.07em] text-white transition-colors duration-200 hover:bg-[#985c35] active:scale-[.99]"
               href="#contact"
             >
-              Ask us directly{" "}
+              Écrivez-nous{" "}
               <ArrowRight
                 aria-hidden="true"
                 className="transition-transform group-hover:translate-x-[3px]"
@@ -69,7 +69,7 @@ export function FaqSection() {
         <div
           className="grid w-full content-start gap-3"
           role="group"
-          aria-label="Frequently asked questions"
+          aria-label="Questions fréquentes"
         >
           {questions.map(({ question, answer }, index) => (
             <details

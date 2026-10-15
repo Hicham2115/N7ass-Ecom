@@ -4,26 +4,26 @@ import { ArrowRight } from "lucide-react";
 
 const pieces = [
   {
-    name: "Scalloped Copper Pendant",
-    description: "Hand-hammered texture with a warm, ambient glow.",
+    name: "Suspension festonnée en cuivre",
+    description: "Texture martelée à la main et lumière douce et chaleureuse.",
     image: "/cu/pendant-scalloped.jpeg",
     imageClassName: "scale-[1.55] group-hover:scale-[1.62]",
   },
   {
-    name: "Hammered Copper Basin",
-    description: "A sculptural centrepiece for your bathroom.",
+    name: "Vasque en cuivre martelé",
+    description: "Une pièce sculpturale au cœur de votre salle de bain.",
     image: "/cu/basin-hammered.jpeg",
     imageClassName: "group-hover:scale-[1.04]",
   },
   {
-    name: "Circular Copper Pendant",
-    description: "Bold form, artisanal detail for modern spaces.",
+    name: "Suspension circulaire en cuivre",
+    description: "Une silhouette affirmée et un savoir-faire artisanal.",
     image: "/cu/pendant-loop-room.png",
     imageClassName: "group-hover:scale-[1.04]",
   },
   {
-    name: "Copper Fire Bowl",
-    description: "A striking focal point for outdoor living.",
+    name: "Brasero en cuivre",
+    description: "Une pièce maîtresse pour vos moments en plein air.",
     image: "/cu/firebowl-outdoor.jpeg",
     imageClassName: "group-hover:scale-[1.04]",
   },
@@ -42,14 +42,14 @@ export function FeaturedProductsSection() {
           id="featured-title"
         >
           <span aria-hidden="true" className="h-px w-12 bg-[#c39170] max-[700px]:w-7" />
-          Featured Products
+          Pièces choisies
           <span aria-hidden="true" className="h-px w-12 bg-[#c39170] max-[700px]:w-7" />
         </h2>
         <Link
           className="group absolute right-0 inline-flex items-center gap-2 text-[clamp(12px,0.85vw,14px)] font-medium uppercase tracking-[.07em] text-[#a66b45] transition-colors hover:text-[#211f1b] max-[700px]:static max-[700px]:self-end"
           href="/products"
         >
-          View all products
+          Voir toute la collection
           <ArrowRight aria-hidden="true" className="transition-transform group-hover:translate-x-1" size={14} />
         </Link>
       </div>
@@ -59,7 +59,7 @@ export function FeaturedProductsSection() {
             <Link
               className="relative mb-3 block aspect-square overflow-hidden bg-[#e8dfd3]"
               href="#contact"
-              aria-label={`Ask about ${piece.name}`}
+              aria-label={`En savoir plus sur ${piece.name}`}
             >
               <Image
                 className={`object-cover transition-transform duration-500 ${piece.imageClassName}`}
@@ -79,7 +79,7 @@ export function FeaturedProductsSection() {
               className="group/link mt-4 inline-flex items-center gap-3 text-[clamp(12px,0.85vw,14px)] font-medium uppercase tracking-[.07em] text-[#a66b45] transition-colors hover:text-[#211f1b] max-[700px]:mt-3 max-[700px]:text-[clamp(12px,0.85vw,14px)]"
               href="#contact"
             >
-              View product
+              Découvrir la pièce
               <ArrowRight aria-hidden="true" className="transition-transform group-hover/link:translate-x-1" size={14} />
             </Link>
           </article>

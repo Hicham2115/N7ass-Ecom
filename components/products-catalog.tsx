@@ -21,10 +21,10 @@ import {
 
 type SortOrder = "featured" | "price-asc" | "price-desc" | "name-asc";
 const sortLabels: Record<SortOrder, string> = {
-  featured: "Featured",
-  "price-asc": "Price: low to high",
-  "price-desc": "Price: high to low",
-  "name-asc": "Name: A to Z",
+  featured: "À la une",
+  "price-asc": "Prix croissant",
+  "price-desc": "Prix décroissant",
+  "name-asc": "Nom : A à Z",
 };
 type FilterState = {
   selectedCategories: string[];
@@ -59,7 +59,7 @@ function FilterFields({
     <div className="divide-y divide-[#e1d8ce]">
       <details className="group py-4" open>
         <summary className="flex cursor-pointer list-none items-center justify-between font-[Georgia,Times_New_Roman,serif] text-[18px] [&::-webkit-details-marker]:hidden">
-          Category
+          Catégorie
           <ChevronDown aria-hidden="true" className="size-4 text-[#80634e] transition-transform group-open:rotate-180" />
         </summary>
         <div className="mt-3 grid gap-2.5">
@@ -70,7 +70,7 @@ function FilterFields({
               onChange={() => setSelectedCategories([])}
               type="checkbox"
             />
-            <span className="flex-1">All Products</span>
+            <span className="flex-1">Tous les produits</span>
             <span className="text-xs text-[#8c8379]">{products.length}</span>
           </label>
           {categories.map((item) => (
@@ -90,7 +90,7 @@ function FilterFields({
 
       <details className="group py-4" open>
         <summary className="flex cursor-pointer list-none items-center justify-between font-[Georgia,Times_New_Roman,serif] text-[18px] [&::-webkit-details-marker]:hidden">
-          Room
+          Pièce
           <ChevronDown aria-hidden="true" className="size-4 text-[#80634e] transition-transform group-open:rotate-180" />
         </summary>
         <div className="mt-3 grid gap-2.5">
@@ -101,7 +101,7 @@ function FilterFields({
               onChange={() => setSelectedRooms([])}
               type="checkbox"
             />
-            <span className="flex-1">All Rooms</span>
+            <span className="flex-1">Toutes les pièces</span>
             <span className="text-xs text-[#8c8379]">{products.length}</span>
           </label>
           {rooms.map((item) => (
@@ -126,7 +126,7 @@ function FilterFields({
         </summary>
         <div className="px-1 pt-5">
           <Slider
-            aria-label="Price range"
+            aria-label="Fourchette de prix"
             className="py-1"
             max={maximumPrice}
             min={minimumPrice}
@@ -143,7 +143,7 @@ function FilterFields({
 
       <details className="group py-4" open>
         <summary className="flex cursor-pointer list-none items-center justify-between font-[Georgia,Times_New_Roman,serif] text-[18px] [&::-webkit-details-marker]:hidden">
-          Availability
+          Disponibilité
           <ChevronDown aria-hidden="true" className="size-4 text-[#80634e] transition-transform group-open:rotate-180" />
         </summary>
         <label className="mt-3 flex cursor-pointer items-center gap-3 text-[13px] text-[#49443e]">
@@ -153,7 +153,7 @@ function FilterFields({
             onChange={(event) => setInStockOnly(event.target.checked)}
             type="checkbox"
           />
-          <span className="flex-1">Show in-stock pieces</span>
+          <span className="flex-1">Afficher les pièces disponibles</span>
           <span className="text-xs text-[#8c8379]">{products.filter((product) => product.inStock).length}</span>
         </label>
       </details>
@@ -219,12 +219,12 @@ export function ProductsCatalog() {
   return (
     <main className="min-h-[70vh] bg-[#fcfaf6] text-[#211f1b]">
       <div className="mx-auto grid max-w-[1540px] grid-cols-[244px_minmax(0,1fr)] gap-10 px-[max(3.1vw,24px)] pb-20 pt-8 max-[900px]:grid-cols-1 max-[900px]:gap-0 max-[900px]:px-6 max-[640px]:px-4 max-[640px]:pb-14 max-[640px]:pt-6">
-        <aside className="border-r border-[#e1d8ce] pr-7 max-[900px]:hidden" aria-label="Product filters">
-          <p className="mb-5 mt-1 text-[11px] font-semibold uppercase tracking-[.18em] text-[#795237]">Shop</p>
+        <aside className="border-r border-[#e1d8ce] pr-7 max-[900px]:hidden" aria-label="Filtres des produits">
+          <p className="mb-5 mt-1 text-[11px] font-semibold uppercase tracking-[.18em] text-[#795237]">Boutique</p>
           <FilterFields {...filterState} />
           {activeFilterCount > 0 && (
             <button className="mt-4 text-[11px] font-semibold uppercase tracking-[.12em] text-[#795237] underline underline-offset-4" onClick={clearFilters} type="button">
-              Clear all filters
+              Effacer tous les filtres
             </button>
           )}
         </aside>
@@ -232,12 +232,12 @@ export function ProductsCatalog() {
         <section aria-labelledby="products-title" className="min-w-0">
           <div className="mb-6 flex items-end justify-between gap-6 max-[640px]:mb-5 max-[640px]:items-start">
             <div>
-              <h1 className="m-0 font-[Georgia,Times_New_Roman,serif] text-[clamp(42px,5vw,66px)] font-normal leading-[.98] tracking-[-.045em] max-[640px]:text-[clamp(38px,10vw,48px)]" id="products-title">The Collection</h1>
-              <p aria-live="polite" className="mb-0 mt-2 text-[10px] font-semibold uppercase tracking-[.18em] text-[#6d6257]">{visibleProducts.length} {visibleProducts.length === 1 ? "product" : "products"}</p>
+              <h1 className="m-0 font-[Georgia,Times_New_Roman,serif] text-[clamp(42px,5vw,66px)] font-normal leading-[.98] tracking-[-.045em] max-[640px]:text-[clamp(38px,10vw,48px)]" id="products-title">La collection</h1>
+              <p aria-live="polite" className="mb-0 mt-2 text-[10px] font-semibold uppercase tracking-[.18em] text-[#6d6257]">{visibleProducts.length} {visibleProducts.length === 1 ? "produit" : "produits"}</p>
             </div>
 
             <div className="flex items-center gap-3 pb-1 max-[900px]:hidden">
-              <span className="text-[13px] text-[#51473e]" id="desktop-sort-label">Sort by</span>
+              <span className="text-[13px] text-[#51473e]" id="desktop-sort-label">Trier par</span>
               <Select
                 onValueChange={(value) => setSortOrder(value as SortOrder)}
                 value={sortOrder}
@@ -246,10 +246,10 @@ export function ProductsCatalog() {
                   <SelectValue>{selectedSortLabel}</SelectValue>
                 </SelectTrigger>
                 <SelectContent align="end">
-                  <SelectItem value="featured">Featured</SelectItem>
-                  <SelectItem value="price-asc">Price: low to high</SelectItem>
-                  <SelectItem value="price-desc">Price: high to low</SelectItem>
-                  <SelectItem value="name-asc">Name: A to Z</SelectItem>
+                  <SelectItem value="featured">À la une</SelectItem>
+                  <SelectItem value="price-asc">Prix croissant</SelectItem>
+                  <SelectItem value="price-desc">Prix décroissant</SelectItem>
+                  <SelectItem value="name-asc">Nom : A à Z</SelectItem>
                 </SelectContent>
               </Select>
             </div>
@@ -260,16 +260,16 @@ export function ProductsCatalog() {
               <DialogTrigger asChild>
                 <Button className="h-10 gap-2 rounded-none border-[#cdb9a5] bg-transparent px-3 text-[11px] uppercase tracking-[.11em] text-[#795237] hover:bg-[#f0e7dd] hover:text-[#211f1b]" variant="outline">
                   <SlidersHorizontal aria-hidden="true" size={15} />
-                  Filters{activeFilterCount > 0 ? ` (${activeFilterCount})` : ""}
+                  Filtres{activeFilterCount > 0 ? ` (${activeFilterCount})` : ""}
                 </Button>
               </DialogTrigger>
-              <DialogContent aria-describedby="mobile-filter-description" aria-label="Filter products" className="max-[640px]:max-h-[90svh]">
+              <DialogContent aria-describedby="mobile-filter-description" aria-label="Filtrer les produits" className="max-[640px]:max-h-[90svh]">
                 <div className="flex items-start justify-between gap-6 border-b border-[#ddd4c7] pb-4">
                   <div>
-                    <DialogTitle>Filter the collection</DialogTitle>
-                    <DialogDescription className="mt-1" id="mobile-filter-description">Find the right piece for your space.</DialogDescription>
+                    <DialogTitle>Filtrer la collection</DialogTitle>
+                    <DialogDescription className="mt-1" id="mobile-filter-description">Trouvez la pièce idéale pour votre intérieur.</DialogDescription>
                   </div>
-                  <DialogClose aria-label="Close filters" className="grid size-9 shrink-0 place-items-center rounded-full border border-[#d9cec1] text-[#51473e] transition-colors hover:bg-[#f0e7dd]">
+                  <DialogClose aria-label="Fermer les filtres" className="grid size-9 shrink-0 place-items-center rounded-full border border-[#d9cec1] text-[#51473e] transition-colors hover:bg-[#f0e7dd]">
                     <X aria-hidden="true" size={17} />
                   </DialogClose>
                 </div>
@@ -277,16 +277,16 @@ export function ProductsCatalog() {
                   <FilterFields {...filterState} />
                 </div>
                 <div className="flex items-center justify-between gap-4 border-t border-[#ddd4c7] pt-4">
-                  <button className="text-[11px] font-semibold uppercase tracking-[.12em] text-[#795237] underline underline-offset-4" onClick={clearFilters} type="button">Clear all</button>
+                  <button className="text-[11px] font-semibold uppercase tracking-[.12em] text-[#795237] underline underline-offset-4" onClick={clearFilters} type="button">Tout effacer</button>
                   <DialogClose asChild>
-                    <Button className="h-11 rounded-none bg-[#9c613b] px-5 text-[11px] uppercase tracking-[.12em] text-white hover:bg-[#77482d]">Show {visibleProducts.length} products</Button>
+                    <Button className="h-11 rounded-none bg-[#9c613b] px-5 text-[11px] uppercase tracking-[.12em] text-white hover:bg-[#77482d]">Voir {visibleProducts.length} produits</Button>
                   </DialogClose>
                 </div>
               </DialogContent>
             </Dialog>
 
             <div className="flex items-center gap-2.5">
-              <span className="shrink-0 text-[11px] text-[#766d63] max-[420px]:sr-only" id="mobile-sort-label">Sort by</span>
+              <span className="shrink-0 text-[11px] text-[#766d63] max-[420px]:sr-only" id="mobile-sort-label">Trier par</span>
               <Select
                 onValueChange={(value) => setSortOrder(value as SortOrder)}
                 value={sortOrder}
@@ -295,10 +295,10 @@ export function ProductsCatalog() {
                   <SelectValue>{selectedSortLabel}</SelectValue>
                 </SelectTrigger>
                 <SelectContent align="end">
-                  <SelectItem value="featured">Featured</SelectItem>
-                  <SelectItem value="price-asc">Price: low to high</SelectItem>
-                  <SelectItem value="price-desc">Price: high to low</SelectItem>
-                  <SelectItem value="name-asc">Name: A to Z</SelectItem>
+                  <SelectItem value="featured">À la une</SelectItem>
+                  <SelectItem value="price-asc">Prix croissant</SelectItem>
+                  <SelectItem value="price-desc">Prix décroissant</SelectItem>
+                  <SelectItem value="name-asc">Nom : A à Z</SelectItem>
                 </SelectContent>
               </Select>
             </div>
@@ -317,7 +317,7 @@ export function ProductsCatalog() {
                       src={product.image}
                     />
                     <button
-                      aria-label={favorites.includes(product.id) ? `Remove ${product.name} from saved pieces` : `Save ${product.name}`}
+                      aria-label={favorites.includes(product.id) ? `Retirer ${product.name} des favoris` : `Ajouter ${product.name} aux favoris`}
                       aria-pressed={favorites.includes(product.id)}
                       className={`absolute right-3 top-3 grid size-10 place-items-center rounded-full transition-colors max-[640px]:right-2 max-[640px]:top-2 max-[640px]:size-9 ${favorites.includes(product.id) ? "bg-[#a9653e] text-white" : "bg-[#fcfaf6]/90 text-[#795237] hover:bg-white"}`}
                       onClick={() => toggleFavorite(product.id)}
@@ -332,10 +332,10 @@ export function ProductsCatalog() {
                         <Link className="transition-colors hover:text-[#9c613b]" href="/#contact">{product.name}</Link>
                       </h2>
                       <p className="mb-0 mt-1.5 text-[9px] uppercase tracking-[.17em] text-[#84796e] max-[640px]:text-[8px]">{product.category}</p>
-                      <p className="mb-0 mt-2 text-[13px] text-[#39342e] max-[640px]:mt-1.5 max-[640px]:text-[12px]">${product.price.toLocaleString()}</p>
+                      <p className="mb-0 mt-2 text-[13px] text-[#39342e] max-[640px]:mt-1.5 max-[640px]:text-[12px]">{product.price.toLocaleString("fr-MA")} $</p>
                     </div>
                     <Button
-                      aria-label={product.inStock ? `Add ${product.name} to bag` : `${product.name} is out of stock`}
+                      aria-label={product.inStock ? `Ajouter ${product.name} au panier` : `${product.name} est indisponible`}
                       className="mt-1 size-11 shrink-0 bg-[#ad693c] text-white hover:bg-[#7c4a2d] max-[640px]:size-9"
                       disabled={!product.inStock}
                       onClick={() => addToCart(product.id)}
@@ -349,17 +349,17 @@ export function ProductsCatalog() {
             </div>
           ) : (
             <div className="mt-8 border-y border-[#ded5cb] py-16 text-center">
-              <h2 className="m-0 font-[Georgia,Times_New_Roman,serif] text-3xl font-normal">No pieces match these filters</h2>
-              <p className="mb-5 mt-3 text-sm text-[#736e65]">Adjust your selection to see more of the collection.</p>
-              <Button className="h-11 rounded-none bg-[#9c613b] px-6 text-[11px] uppercase tracking-[.12em] text-white hover:bg-[#77482d]" onClick={clearFilters}>Clear filters</Button>
+              <h2 className="m-0 font-[Georgia,Times_New_Roman,serif] text-3xl font-normal">Aucune pièce ne correspond à ces filtres</h2>
+              <p className="mb-5 mt-3 text-sm text-[#736e65]">Modifiez votre sélection pour découvrir d’autres pièces.</p>
+              <Button className="h-11 rounded-none bg-[#9c613b] px-6 text-[11px] uppercase tracking-[.12em] text-white hover:bg-[#77482d]" onClick={clearFilters}>Effacer les filtres</Button>
             </div>
           )}
 
           <div className="mt-14 flex flex-col items-center border-t border-[#ded5cb] pt-9 text-center max-[640px]:mt-10 max-[640px]:pt-7">
-            <p className="mb-2 mt-0 text-[10px] font-semibold uppercase tracking-[.18em] text-[#9c613b]">Made by hand. Made to last.</p>
-            <p className="mb-4 mt-0 font-[Georgia,Times_New_Roman,serif] text-[clamp(23px,2.4vw,32px)] leading-tight tracking-[-.025em]">Need a custom size or finish?</p>
+            <p className="mb-2 mt-0 text-[10px] font-semibold uppercase tracking-[.18em] text-[#9c613b]">Fait main. Fait pour durer.</p>
+            <p className="mb-4 mt-0 font-[Georgia,Times_New_Roman,serif] text-[clamp(23px,2.4vw,32px)] leading-tight tracking-[-.025em]">Une taille ou une finition sur mesure ?</p>
             <Link className="group inline-flex min-h-11 items-center gap-3 border border-[#a9653e] px-5 text-[11px] font-semibold uppercase tracking-[.12em] text-[#795237] transition-colors hover:bg-[#a9653e] hover:text-white" href="/#contact">
-              Talk with Cuveroo <ArrowRight aria-hidden="true" className="transition-transform group-hover:translate-x-1" size={15} />
+              Parlons de votre projet <ArrowRight aria-hidden="true" className="transition-transform group-hover:translate-x-1" size={15} />
             </Link>
           </div>
         </section>
