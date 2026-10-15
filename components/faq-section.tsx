@@ -32,7 +32,7 @@ const questions = [
 export function FaqSection() {
   return (
     <section
-      className="bg-[#f8f4ee] px-[max(5vw,calc((100vw-1440px)/2))] py-[76px] max-[980px]:px-[4%] max-[700px]:px-[5%] max-[700px]:py-[55px]"
+      className=" px-[max(5vw,calc((100vw-1440px)/2))] py-[76px] max-[980px]:px-[4%] max-[700px]:px-[5%] max-[700px]:py-[55px]"
       aria-labelledby="faq-title"
     >
       <div className="grid grid-cols-1 items-start gap-10 md:grid-cols-[minmax(0,.82fr)_minmax(0,1.18fr)] md:gap-[clamp(42px,7vw,100px)]">
@@ -50,7 +50,8 @@ export function FaqSection() {
           </div>
           <div className="max-w-[440px] border-t border-[#d9cfc0] pt-5">
             <p className="mb-5 mt-0 text-[14px] leading-[1.7] text-[#655f58]">
-              From choosing a finish to caring for copper, find a few useful answers here.
+              From choosing a finish to caring for copper, find a few useful
+              answers here.
             </p>
             <Link
               className="group inline-flex min-h-[46px] items-center justify-center gap-[14px] border border-[#b87343] bg-[#b87343] px-5 text-[10px] font-bold uppercase tracking-[.07em] text-white transition-colors duration-200 hover:bg-[#985c35] active:scale-[.99]"
