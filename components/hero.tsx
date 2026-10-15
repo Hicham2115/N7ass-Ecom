@@ -6,29 +6,38 @@ export function Hero() {
   return (
     <section
       aria-labelledby="hero-title"
-      className="relative flex min-h-[clamp(560px,calc(100svh-135px),790px)] items-stretch overflow-hidden bg-[#e9ddcf] max-[700px]:min-h-[690px] max-[700px]:items-end"
+      className="relative flex min-h-[clamp(560px,calc(100svh-135px),790px)] items-stretch overflow-hidden bg-[#e9ddcf] max-[700px]:min-h-[620px] max-[700px]:items-end"
       id="home"
     >
       <Image
         alt="Suspension en cuivre martelé dans un intérieur ensoleillé, près d’une branche d’olivier et d’une console en pierre"
-        className="animate-[cuveroo-image-arrive_1400ms_cubic-bezier(.2,.7,.2,1)_both] object-cover object-left motion-reduce:animate-none max-[700px]:[object-position:68%_35%]"
+        className="animate-[cuveroo-image-arrive_1400ms_cubic-bezier(.2,.7,.2,1)_both] object-cover object-left motion-reduce:animate-none max-[700px]:hidden"
         fill
         priority
         sizes="100vw"
         src="/cu/hero-copper-wide.png"
       />
+      <Image
+        alt=""
+        aria-hidden="true"
+        className="animate-[cuveroo-image-arrive_1400ms_cubic-bezier(.2,.7,.2,1)_both] object-cover motion-reduce:animate-none min-[701px]:hidden"
+        fill
+        priority
+        sizes="100vw"
+        src="/cu/hero-copper-mobile.png"
+      />
       <div
         aria-hidden="true"
-        className="absolute inset-0 bg-gradient-to-r from-[#f3ebdf]/20 via-[#f3ebdf]/5 to-transparent max-[700px]:bg-gradient-to-t max-[700px]:from-[#f3ebdf]/95 max-[700px]:via-[#f3ebdf]/70 max-[700px]:to-transparent"
+        className="absolute inset-0 bg-gradient-to-r from-[#f3ebdf]/20 via-[#f3ebdf]/5 to-transparent max-[700px]:bg-gradient-to-t max-[700px]:from-[#f3ebdf]/80 max-[700px]:via-[#f3ebdf]/40 max-[700px]:to-transparent"
       />
       <div className="relative z-10 flex w-[57%] flex-col items-start justify-center py-[66px] pl-[max(11.5vw,calc((100vw-1500px)/2))] pr-0 max-[980px]:w-[62%] max-[980px]:pl-[8%] max-[700px]:w-full max-[700px]:px-[7%] max-[700px]:py-12">
         <div className="relative isolate w-full">
           <div
             aria-hidden="true"
-            className="pointer-events-none absolute inset-[-30px] z-0 rounded-[45%] bg-[radial-gradient(ellipse_at_40%_50%,rgba(250,246,239,.92)_0%,rgba(250,246,239,.78)_54%,rgba(250,246,239,0)_100%)] blur-3xl"
+            className="pointer-events-none absolute inset-[-30px] z-0 rounded-[45%] bg-[radial-gradient(ellipse_at_40%_50%,rgba(250,246,239,.92)_0%,rgba(250,246,239,.78)_54%,rgba(250,246,239,0)_100%)] blur-3xl max-[700px]:inset-[-10px] max-[700px]:bg-[radial-gradient(ellipse_at_45%_50%,rgba(250,246,239,.78)_0%,rgba(250,246,239,.48)_58%,rgba(250,246,239,0)_100%)] max-[700px]:blur-xl"
           />
           <div className="relative z-10">
-            <p className="mb-0 animate-[cuveroo-fade-up_850ms_cubic-bezier(.22,1,.36,1)_120ms_both] text-[clamp(11px,0.78vw,13px)] font-bold uppercase leading-[1.7] tracking-[.19em] text-[#b87343] motion-reduce:animate-none max-[700px]:max-w-[250px]">
+            <p className="mb-0 animate-[cuveroo-fade-up_850ms_cubic-bezier(.22,1,.36,1)_120ms_both] text-[clamp(11px,0.78vw,13px)] font-bold uppercase leading-[1.7] tracking-[.19em] text-[#b87343] motion-reduce:animate-none max-[700px]:hidden">
               Façonné à la main pour des lieux qui ont une âme
             </p>
             <h1

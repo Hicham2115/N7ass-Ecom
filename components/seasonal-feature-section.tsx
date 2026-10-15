@@ -10,14 +10,22 @@ export function SeasonalFeatureSection() {
     >
       <Image
         alt="Salle à manger ensoleillée avec suspension et objets de table en cuivre"
-        className="object-cover object-center max-[700px]:object-[68%_center]"
+        className="object-cover object-center max-[700px]:hidden"
         fill
         sizes="100vw"
         src="/cu/seasonal-edit-room.png"
       />
+      <Image
+        alt=""
+        aria-hidden="true"
+        className="object-cover min-[701px]:hidden"
+        fill
+        sizes="100vw"
+        src="/cu/seasonal-edit-room-mobile.png"
+      />
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0 bg-gradient-to-r from-[#f1e7dc]/55 via-[#f1e7dc]/15 to-transparent max-[700px]:bg-gradient-to-t max-[700px]:from-[#f1e7dc]/95 max-[700px]:via-[#f1e7dc]/75 max-[700px]:to-transparent"
+        className="pointer-events-none absolute inset-0 bg-gradient-to-r from-[#f1e7dc]/55 via-[#f1e7dc]/15 to-transparent max-[700px]:bg-[linear-gradient(to_top,rgba(241,231,220,.96)_0%,rgba(241,231,220,.9)_34%,rgba(241,231,220,.56)_58%,rgba(241,231,220,.14)_78%,transparent_100%)]"
       />
       <div className="relative z-10 w-[43%] max-w-[500px] py-14 pl-[6.5%] pr-0 max-[980px]:w-[48%] max-[700px]:w-full max-[700px]:max-w-none max-[700px]:px-[7%] max-[700px]:pb-10 max-[700px]:pt-20">
         <p className="m-0 text-[clamp(13px,0.9vw,15px)] font-bold uppercase tracking-[0.17em] text-[#a76f49]">
@@ -31,7 +39,7 @@ export function SeasonalFeatureSection() {
           <br />
           pour longtemps
         </h2>
-        <p className="mb-6 max-w-[390px] text-[clamp(15px,1.05vw,17px)] leading-[1.65] text-[#514a42]">
+        <p className="mb-6 max-w-[390px] text-[clamp(15px,1.05vw,17px)] leading-[1.65] text-[#514a42] max-[700px]:text-[17px] max-[700px]:leading-[1.7] max-[700px]:text-[#39342e]">
           Des textures martelées à la main, des formes organiques et un design
           durable. Une sélection de pièces intemporelles qui apportent chaleur,
           caractère et âme à votre intérieur.

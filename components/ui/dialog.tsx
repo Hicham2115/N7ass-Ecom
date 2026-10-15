@@ -31,11 +31,13 @@ function DialogOverlay({ className, ...props }: React.ComponentProps<typeof Dial
 }
 
 type DialogContentProps = React.ComponentProps<typeof DialogPrimitive.Content> & {
-  mobileSide?: "bottom" | "right";
+  mobileSide?: "bottom" | "left" | "right";
 };
 
 function DialogContent({ className, children, mobileSide = "bottom", ...props }: DialogContentProps) {
-  const mobilePosition = mobileSide === "right"
+  const mobilePosition = mobileSide === "left"
+    ? "max-[640px]:bottom-0 max-[640px]:left-0 max-[640px]:right-auto max-[640px]:top-0 max-[640px]:h-full max-[640px]:max-h-full max-[640px]:max-w-[min(86vw,380px)] max-[640px]:rounded-none max-[640px]:border-l-0 max-[640px]:border-r max-[640px]:border-t-0 max-[640px]:data-[state=closed]:slide-out-to-left max-[640px]:data-[state=open]:slide-in-from-left"
+    : mobileSide === "right"
     ? "max-[640px]:bottom-0 max-[640px]:left-auto max-[640px]:right-0 max-[640px]:top-0 max-[640px]:h-full max-[640px]:max-h-full max-[640px]:max-w-[min(92vw,440px)] max-[640px]:rounded-none max-[640px]:border-l max-[640px]:border-t-0 max-[640px]:data-[state=closed]:slide-out-to-right max-[640px]:data-[state=open]:slide-in-from-right"
     : "max-[640px]:bottom-0 max-[640px]:left-0 max-[640px]:right-0 max-[640px]:top-auto max-[640px]:h-auto max-[640px]:max-h-[88svh] max-[640px]:max-w-none max-[640px]:rounded-t-2xl max-[640px]:border-l-0 max-[640px]:border-t max-[640px]:data-[state=closed]:slide-out-to-bottom max-[640px]:data-[state=open]:slide-in-from-bottom";
 

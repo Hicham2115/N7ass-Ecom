@@ -1,9 +1,10 @@
 "use client";
 
 import Link from "next/link";
-import { Menu, Search } from "lucide-react";
+import { ArrowRight, Menu, Search, X } from "lucide-react";
 import { usePathname } from "next/navigation";
 import { ShopActions } from "@/components/shop-actions";
+import { Dialog, DialogClose, DialogContent, DialogDescription, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 
 const navigationLinks = [
   { href: "/", label: "Accueil" },
@@ -21,28 +22,41 @@ export default function Component() {
     <header className="relative z-10 bg-[#f8f5ef]">
       <div className="grid min-h-[82px] grid-cols-[1fr_auto_1fr] items-center px-[max(6vw,calc((100vw-1540px)/2))] max-[980px]:px-[5%] max-[700px]:min-h-[72px] max-[700px]:px-[5%] max-[400px]:px-[4%]">
         <div className="flex items-center gap-5 justify-self-start max-[700px]:gap-[9px] max-[400px]:gap-[3px]">
-          <details className="group relative hidden max-[700px]:block">
-            <summary
-              aria-label="Ouvrir le menu"
-              className="grid h-[34px] w-8 cursor-pointer list-none place-items-center [&::-webkit-details-marker]:hidden"
-            >
-              <Menu aria-hidden="true" size={21} strokeWidth={1.8} />
-            </summary>
-            <nav
-              aria-label="Navigation mobile"
-              className="absolute left-[-5px] top-[calc(100%+15px)] z-50 hidden min-w-[220px] gap-0 border border-[#ddd4c7] bg-[#fcfaf6] p-2 px-4 shadow-[0_12px_28px_rgba(32,25,17,.12)] group-open:grid"
-            >
-              {navigationLinks.map((link) => (
-                <Link
-                  className="group relative border-b border-[#ddd4c7] py-3 text-[clamp(12px,0.85vw,14px)] uppercase transition-colors duration-200 hover:pl-1 hover:text-[#b87343] last:border-b-0 motion-reduce:transition-none"
-                  href={link.href}
-                  key={link.label}
-                >
-                  {link.label}
-                </Link>
-              ))}
-            </nav>
-          </details>
+          <Dialog>
+            <DialogTrigger asChild>
+              <button
+                aria-label="Ouvrir le menu"
+                className="grid h-[34px] w-8 place-items-center text-[#29251f] transition-colors hover:text-[#b87343] max-[700px]:grid min-[701px]:hidden"
+                type="button"
+              >
+                <Menu aria-hidden="true" size={22} strokeWidth={1.8} />
+              </button>
+            </DialogTrigger>
+            <DialogContent aria-describedby="mobile-navigation-description" aria-label="Menu principal" className="hidden max-[700px]:flex" mobileSide="left">
+              <div className="flex items-start justify-between border-b border-[#ddd4c7] pb-6">
+                <div>
+                  <DialogTitle className="text-[28px] tracking-[.12em]">CUVEROO</DialogTitle>
+                  <DialogDescription className="mt-2" id="mobile-navigation-description">L’art du cuivre, façonné au Maroc.</DialogDescription>
+                </div>
+                <DialogClose aria-label="Fermer le menu" className="grid size-10 place-items-center rounded-full border border-[#d9cec1] text-[#51473e] transition-colors hover:bg-[#f0e7dd]">
+                  <X aria-hidden="true" size={19} />
+                </DialogClose>
+              </div>
+              <nav aria-label="Navigation mobile" className="mt-5 flex-1">
+                {navigationLinks.map((link, index) => (
+                  <Link
+                    className={`group flex min-h-[58px] items-center justify-between border-b border-[#e5ddd2] py-3 text-[13px] font-semibold uppercase tracking-[.1em] transition-colors hover:text-[#b87343] ${((link.label === "Accueil" && pathname === "/") || (link.label === "Boutique" && pathname.startsWith("/products"))) ? "text-[#b87343]" : "text-[#302c26]"}`}
+                    href={link.href}
+                    key={link.label}
+                  >
+                    <span><span className="mr-4 text-[10px] tracking-normal text-[#b87343]/70">0{index + 1}</span>{link.label}</span>
+                    <ArrowRight aria-hidden="true" className="opacity-0 transition-opacity group-hover:opacity-100" size={16} />
+                  </Link>
+                ))}
+              </nav>
+              <p className="border-t border-[#ddd4c7] pt-5 text-[10px] uppercase tracking-[.18em] text-[#8c7d6d]">Créations artisanales · Maroc</p>
+            </DialogContent>
+          </Dialog>
           <Link
             className="grid h-9 w-8 place-items-center text-[#48443f] transition-colors hover:text-[#b87343]"
             href="/products"
