@@ -1,17 +1,22 @@
+"use client";
+
 import Link from "next/link";
-import Image from "next/image";
-import { Menu, Search, ShoppingBag, UserRound } from "lucide-react";
+import { Menu, Search } from "lucide-react";
+import { usePathname } from "next/navigation";
+import { ShopActions } from "@/components/shop-actions";
 
 const navigationLinks = [
-  { href: "#home", label: "Home" },
-  { href: "#categories", label: "Shop" },
-  { href: "#featured", label: "Collections" },
-  { href: "#story", label: "About us" },
-  { href: "#custom", label: "Wholesale" },
-  { href: "#contact", label: "Contact" },
+  { href: "/", label: "Home" },
+  { href: "/products", label: "Shop" },
+  { href: "/#featured", label: "Collections" },
+  { href: "/#story", label: "About us" },
+  { href: "/#custom", label: "Wholesale" },
+  { href: "/#contact", label: "Contact" },
 ];
 
 export default function Component() {
+  const pathname = usePathname();
+
   return (
     <header className="relative z-10 bg-[#f8f5ef]">
       <div className="grid min-h-[82px] grid-cols-[1fr_auto_1fr] items-center px-[max(6vw,calc((100vw-1540px)/2))] max-[980px]:px-[5%] max-[700px]:min-h-[72px] max-[700px]:px-[5%] max-[400px]:px-[4%]">
@@ -40,7 +45,7 @@ export default function Component() {
           </details>
           <Link
             className="grid h-9 w-8 place-items-center text-[#48443f] transition-colors hover:text-[#b87343]"
-            href="#categories"
+            href="/products"
             aria-label="Browse products"
           >
             <Search aria-hidden="true" size={21} strokeWidth={1.8} />
@@ -49,38 +54,23 @@ export default function Component() {
 
         <Link
           className="inline-flex w-max items-center justify-self-center gap-2 font-[Georgia,Times_New_Roman,serif] text-[34px] leading-none tracking-[.14em] text-[#211f1b] max-[700px]:gap-1.5 max-[700px]:text-[23px] max-[400px]:text-[20px]"
-          href="#home"
+            href="/"
           aria-label="Cuveroo home"
         >
           CUVEROO
         </Link>
 
-        <div className="flex items-center justify-self-end gap-[23px] max-[700px]:gap-[11px]">
-          <Link
-            className="grid h-9 w-8 place-items-center text-[#48443f] transition-colors hover:text-[#b87343] max-[700px]:w-[27px] [&_svg]:max-[700px]:h-[19px] [&_svg]:max-[700px]:w-[19px]"
-            href="#contact"
-            aria-label="Contact Cuveroo"
-          >
-            <UserRound aria-hidden="true" size={21} strokeWidth={1.8} />
-          </Link>
-          <Link
-            className="grid h-9 w-8 place-items-center text-[#48443f] transition-colors hover:text-[#b87343] max-[700px]:w-[27px] [&_svg]:max-[700px]:h-[19px] [&_svg]:max-[700px]:w-[19px]"
-            href="#featured"
-            aria-label="View collection"
-          >
-            <ShoppingBag aria-hidden="true" size={21} strokeWidth={1.8} />
-          </Link>
-        </div>
+        <ShopActions />
       </div>
 
       <nav
         className="flex min-h-[53px] items-center justify-center gap-[clamp(25px,3vw,51px)] border-b border-[rgba(65,52,40,.12)] max-[980px]:gap-[22px] max-[700px]:hidden"
         aria-label="Main navigation"
       >
-        {navigationLinks.map((link, index) => (
+        {navigationLinks.map((link) => (
           <Link
             className={
-              index === 0
+              (link.label === "Home" && pathname === "/") || (link.label === "Shop" && pathname.startsWith("/products"))
                 ? "relative flex min-h-[53px] items-center text-[clamp(12px,0.85vw,14px)] font-bold uppercase tracking-[.045em] text-[#b87343] transition-colors duration-200 after:absolute after:inset-x-0 after:bottom-[7px] after:h-0.5 after:origin-left after:bg-[#b87343] after:content-['']"
                 : "relative flex min-h-[53px] items-center text-[clamp(12px,0.85vw,14px)] font-bold uppercase tracking-[.045em] text-[#3e3b37] transition-colors duration-200 hover:text-[#b87343] after:absolute after:bottom-[7px] after:left-0 after:right-0 after:h-0.5 after:origin-left after:scale-x-0 after:bg-[#b87343] after:transition-transform after:duration-200 after:content-[''] hover:after:scale-x-100 focus-visible:after:scale-x-100 motion-reduce:transition-none motion-reduce:after:transition-none"
             }

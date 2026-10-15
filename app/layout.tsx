@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { Footer } from "@/components/footer";
 import { SmoothScroll } from "@/components/smooth-scroll";
+import { ShopProvider } from "@/components/shop-state";
 import { Header } from "@/layout/header";
 import "lenis/dist/lenis.css";
 import "./globals.css";
@@ -26,11 +27,13 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
       <body>
-        <SmoothScroll>
-          <Header />
-          {children}
-          <Footer />
-        </SmoothScroll>
+        <ShopProvider>
+          <SmoothScroll>
+            <Header />
+            {children}
+            <Footer />
+          </SmoothScroll>
+        </ShopProvider>
       </body>
     </html>
   );

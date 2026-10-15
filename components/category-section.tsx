@@ -61,7 +61,7 @@ export function CategorySection() {
         </div>
         <Link
           className="group col-start-3 inline-flex items-center justify-self-end gap-1.5 whitespace-nowrap text-[clamp(12px,0.85vw,14px)] font-semibold uppercase tracking-[0.08em] text-[#a76f49] transition-colors hover:text-[#211f1b]"
-          href="#featured"
+          href="/products"
         >
           Explore all <MoveRight aria-hidden="true" className="transition-transform duration-200 group-hover:translate-x-1" size={14} strokeWidth={1.5} />
         </Link>
