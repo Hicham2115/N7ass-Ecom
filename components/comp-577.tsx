@@ -21,7 +21,7 @@ export default function Component() {
             </summary>
             <nav aria-label="Mobile navigation" className="absolute left-[-5px] top-[calc(100%+15px)] z-50 hidden min-w-[220px] gap-0 border border-[#ddd4c7] bg-[#fcfaf6] p-2 px-4 shadow-[0_12px_28px_rgba(32,25,17,.12)] group-open:grid">
               {navigationLinks.map((link) => (
-                <Link className="border-b border-[#ddd4c7] py-3 text-[11px] uppercase last:border-b-0" href={link.href} key={link.label}>{link.label}</Link>
+                <Link className="border-b border-[#ddd4c7] py-3 text-[11px] uppercase transition-colors hover:text-[#b87343] last:border-b-0" href={link.href} key={link.label}>{link.label}</Link>
               ))}
             </nav>
           </details>
@@ -48,8 +48,8 @@ export default function Component() {
         {navigationLinks.map((link, index) => (
           <Link
             className={index === 0
-              ? "relative flex min-h-[53px] items-center text-[11px] font-bold uppercase tracking-[.045em] text-[#b87343] after:absolute after:inset-x-0 after:bottom-[7px] after:h-0.5 after:bg-[#b87343] after:content-[''] max-[980px]:text-[10px]"
-              : "relative flex min-h-[53px] items-center text-[11px] font-bold uppercase tracking-[.045em] text-[#3e3b37] transition-colors hover:text-[#b87343] max-[980px]:text-[10px]"}
+              ? "relative flex min-h-[53px] items-center text-[11px] font-bold uppercase tracking-[.045em] text-[#b87343] transition-all duration-300 hover:-translate-y-px after:absolute after:inset-x-0 after:bottom-[7px] after:h-0.5 after:origin-left after:bg-[#b87343] after:content-[''] max-[980px]:text-[10px]"
+              : "relative flex min-h-[53px] items-center text-[11px] font-bold uppercase tracking-[.045em] text-[#3e3b37] transition-all duration-300 hover:-translate-y-px hover:text-[#b87343] after:absolute after:bottom-[7px] after:left-0 after:right-0 after:h-0.5 after:origin-left after:scale-x-0 after:bg-[#b87343] after:transition-transform after:duration-300 after:content-[''] hover:after:scale-x-100 focus-visible:after:scale-x-100 max-[980px]:text-[10px] motion-reduce:transition-none motion-reduce:after:transition-none"}
             href={link.href}
             key={link.label}
           >

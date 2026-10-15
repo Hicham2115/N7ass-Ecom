@@ -21,38 +21,40 @@ export function Hero() {
         aria-hidden="true"
         className="absolute inset-0 bg-gradient-to-r from-[#f3ebdf]/20 via-[#f3ebdf]/5 to-transparent max-[700px]:bg-gradient-to-t max-[700px]:from-[#f3ebdf]/95 max-[700px]:via-[#f3ebdf]/70 max-[700px]:to-transparent"
       />
-      <div className="relative z-10 isolate flex w-[57%] flex-col items-start justify-center py-[66px] pl-[max(11.5vw,calc((100vw-1500px)/2))] pr-0 max-[980px]:w-[62%] max-[980px]:pl-[8%] max-[700px]:w-full max-[700px]:px-[7%] max-[700px]:py-12">
-        <div
-          aria-hidden="true"
-          className="pointer-events-none absolute inset-y-[12%] left-[5%] right-[-8%] z-0 rounded-[50%] bg-[radial-gradient(ellipse_at_40%_50%,rgba(250,246,239,.68)_0%,rgba(250,246,239,.45)_54%,rgba(250,246,239,0)_100%)] blur-2xl max-[700px]:inset-y-[4%] max-[700px]:left-[-8%] max-[700px]:right-[-8%] max-[700px]:bg-[radial-gradient(ellipse_at_30%_50%,rgba(250,246,239,.78)_0%,rgba(250,246,239,.6)_58%,rgba(250,246,239,0)_100%)]"
-        />
-        <div className="relative z-10">
-          <p className="mb-0 text-[9px] font-bold uppercase leading-[1.7] tracking-[.19em] text-[#b87343] max-[700px]:max-w-[250px]">
-            Handcrafted for meaningful spaces
-          </p>
-          <h1
-            className="mb-[18px] mt-[23px] max-w-[690px] font-[Georgia,Times_New_Roman,serif] text-[clamp(48px,4.15vw,78px)] font-normal leading-[.99] tracking-[-.045em] text-[#211f1b] max-[700px]:mb-3 max-[700px]:mt-[13px] max-[700px]:text-[clamp(42px,10.3vw,58px)]"
-            id="hero-title"
-          >
-            Timeless Copper
-            <br />
-            for Modern Living
-          </h1>
-          <p className="mb-7 max-w-[370px] text-[15px] leading-[1.72] text-[#4c4842] max-[700px]:mb-[19px] max-[700px]:text-xs">
-            Artisanal lighting and home decor, meticulously
-            <br className="max-[700px]:hidden" /> handcrafted in Morocco. Created
-            for homes
-            <br className="max-[700px]:hidden" /> and hospitality spaces that
-            value authenticity,
-            <br className="max-[700px]:hidden" /> craftsmanship and lasting
-            beauty.
-          </p>
-          <Link
-            className="inline-flex min-h-12 items-center justify-center gap-5 border border-[#b87343] bg-[#b87343] px-9 text-xs font-bold uppercase tracking-[.07em] text-white transition-colors hover:bg-[#985c35] max-[700px]:px-6"
-            href="#categories"
-          >
-            Shop the collection <ArrowRight aria-hidden="true" size={16} />
-          </Link>
+      <div className="relative z-10 flex w-[57%] flex-col items-start justify-center py-[66px] pl-[max(11.5vw,calc((100vw-1500px)/2))] pr-0 max-[980px]:w-[62%] max-[980px]:pl-[8%] max-[700px]:w-full max-[700px]:px-[7%] max-[700px]:py-12">
+        <div className="relative isolate w-full">
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute inset-[-30px] z-0 rounded-[45%] bg-[radial-gradient(ellipse_at_40%_50%,rgba(250,246,239,.92)_0%,rgba(250,246,239,.78)_54%,rgba(250,246,239,0)_100%)] blur-3xl"
+          />
+          <div className="relative z-10">
+            <p className="mb-0 text-[9px] font-bold uppercase leading-[1.7] tracking-[.19em] text-[#b87343] max-[700px]:max-w-[250px]">
+              Handcrafted for meaningful spaces
+            </p>
+            <h1
+              className="mb-[18px] mt-[23px] max-w-[690px] font-[Georgia,Times_New_Roman,serif] text-[clamp(48px,4.15vw,78px)] font-normal leading-[.99] tracking-[-.045em] text-[#211f1b] max-[700px]:mb-3 max-[700px]:mt-[13px] max-[700px]:text-[clamp(42px,10.3vw,58px)]"
+              id="hero-title"
+            >
+              Timeless Copper
+              <br />
+              for Modern Living
+            </h1>
+            <p className="mb-7 max-w-[390px] text-[15px] leading-[1.72] text-[#4c4842] max-[700px]:mb-[19px] max-[700px]:text-xs">
+              Artisanal lighting and home decor, meticulously
+              <br className="max-[700px]:hidden" /> handcrafted in Morocco.
+              Created for homes
+              <br className="max-[700px]:hidden" /> and hospitality spaces that
+              value authenticity,
+              <br className="max-[700px]:hidden" /> craftsmanship and lasting
+              beauty.
+            </p>
+            <Link
+              className="inline-flex min-h-12 items-center justify-center gap-5 border border-[#b87343] bg-[#b87343] px-9 text-xs font-bold uppercase tracking-[.07em] text-white transition-colors hover:bg-[#985c35] max-[700px]:px-6"
+              href="#categories"
+            >
+              Shop the collection <ArrowRight aria-hidden="true" size={16} />
+            </Link>
+          </div>
         </div>
       </div>
     </section>
