@@ -42,7 +42,9 @@ export function ContactSection() {
               required
               type="email"
             />
-            <span aria-hidden="true" className="text-[#a9653e]">!</span>
+            <span aria-hidden="true" className="text-[#a9653e]">
+              !
+            </span>
           </label>
 
           <label className="grid gap-5 font-sans">
@@ -51,25 +53,24 @@ export function ContactSection() {
             </span>
             <textarea
               aria-label="Your message"
-              className="min-h-[clamp(120px,11vw,160px)] w-full resize-y border-0 border-b-2 border-[#d3c9bd] bg-transparent px-0 py-1 font-sans text-[clamp(16px,1.1vw,18px)] leading-[1.6] text-[#211f1b] outline-none placeholder:text-[#aaa197] max-[700px]:min-h-[130px]"
+              className="min-h-[clamp(76px,6vw,104px)] w-full resize-y border-0 border-b-2 border-[#d3c9bd] bg-transparent px-0 py-1 font-sans text-[clamp(16px,1.1vw,18px)] leading-[1.6] text-[#211f1b] outline-none placeholder:text-[#aaa197] max-[700px]:min-h-[88px]"
               name="message"
               placeholder="How can we help?"
               required
-              rows={4}
+              rows={3}
             />
           </label>
 
           <div className="flex flex-wrap items-center gap-5 border-t border-[#ded8d0] pt-[clamp(30px,3.2vw,44px)]">
             <button
-              className="inline-flex min-h-[56px] min-w-[196px] items-center justify-center gap-5 rounded-full bg-[#171614] px-7 font-sans text-[clamp(13px,0.9vw,15px)] font-medium uppercase tracking-[.08em] text-white shadow-[0_10px_30px_rgba(33,31,27,0.12)] transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#795237] disabled:cursor-not-allowed"
-              disabled
+              className="inline-flex min-h-[46px] min-w-[164px] items-center justify-center gap-4 bg-[#171614] px-6 font-sans text-[clamp(12px,0.82vw,13px)] font-medium uppercase tracking-[.07em] text-white shadow-[0_8px_22px_rgba(33,31,27,0.12)] transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#795237] disabled:cursor-not-allowed"
               type="button"
             >
-              Send enquiry <ArrowRight aria-hidden="true" size={18} />
+              Send enquiry <ArrowRight aria-hidden="true" size={16} />
             </button>
-            <p className="m-0 text-[clamp(13px,0.9vw,15px)] text-[#82786d]">
+            {/* <p className="m-0 text-[clamp(13px,0.9vw,15px)] text-[#82786d]">
               Online submissions are coming soon.
-            </p>
+            </p> */}
           </div>
         </form>
       </div>

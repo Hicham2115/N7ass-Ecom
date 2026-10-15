@@ -34,7 +34,7 @@ export default function Component() {
             >
               {navigationLinks.map((link) => (
                 <Link
-                  className="border-b border-[#ddd4c7] py-3 text-[clamp(12px,0.85vw,14px)] uppercase transition-colors hover:text-[#b87343] last:border-b-0"
+                  className="group relative border-b border-[#ddd4c7] py-3 text-[clamp(12px,0.85vw,14px)] uppercase transition-colors duration-200 hover:pl-1 hover:text-[#b87343] last:border-b-0 motion-reduce:transition-none"
                   href={link.href}
                   key={link.label}
                 >

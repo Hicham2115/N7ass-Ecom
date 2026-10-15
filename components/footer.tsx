@@ -1,36 +1,127 @@
-import Link from "next/link";
 import Image from "next/image";
+import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import { CurrentYear } from "./current-year";
 
 const footerLinks = [
-  { title: "Shop", links: [["All objects", "/products"], ["Lighting", "/products"], ["Bathroom & spa", "/products"], ["Garden & outdoor", "/products"]] },
-  { title: "Cuveroo", links: [["Our craft", "/#story"], ["Journal", "/#journal"], ["Wholesale & custom", "/#custom"], ["Contact", "/#contact"]] },
+  {
+    title: "Shop",
+    links: [
+      ["All objects", "/products"],
+      ["Lighting", "/products"],
+      ["Bathroom & spa", "/products"],
+      ["Garden & outdoor", "/products"],
+    ],
+  },
+  {
+    title: "Customer care",
+    links: [
+      ["Contact us", "/#contact"],
+      ["Frequently asked questions", "/#faq-title"],
+      ["Our craft", "/#story"],
+      ["Wholesale & custom", "/#custom"],
+    ],
+  },
 ];
 
 export function Footer() {
   return (
-    <footer className="bg-[#1b1d1b] px-[max(5vw,calc((100vw-1440px)/2))] pb-5 pt-[52px] text-[#fcfaf6] max-[700px]:px-[6%] max-[700px]:pb-[18px] max-[700px]:pt-[39px]">
-      <div className="grid grid-cols-[1.15fr_.75fr_.85fr_1fr] gap-9 pb-10 max-[980px]:gap-[22px] max-[700px]:grid-cols-2 max-[700px]:gap-x-5 max-[700px]:gap-y-[30px]">
-        <div>
-          <Link className="inline-flex w-max items-center justify-self-center gap-2 text-[#fcfaf6]" href="/" aria-label="Cuveroo home">
-            <Image className="h-[38px] w-[38px] object-contain" src="/cuveroo-emblem.png" alt="" width={64} height={64} />
-            <span className="font-[Georgia,Times_New_Roman,serif] text-[22px] leading-none tracking-[.14em]">CUVEROO</span>
-          </Link>
-          <p className="mb-0 mt-[14px] font-[Georgia,Times_New_Roman,serif] text-[14px] leading-[1.6] text-[#b8afa2]">Authentic copper.<br />Timeless design.</p>
+    <footer className="relative isolate overflow-hidden bg-[#241f1a] px-[max(4.5vw,24px)] pt-10 text-[#f8f5ef] max-[700px]:px-4 max-[700px]:pt-6">
+      <div className="relative z-10 mx-auto max-w-[1540px] rounded-[32px] border border-[#443a31] bg-[#241f1a] px-[clamp(28px,5vw,76px)] pb-8 pt-[clamp(34px,4.5vw,64px)] max-[700px]:rounded-[24px] max-[700px]:px-6 max-[700px]:pb-6">
+        <div className="grid grid-cols-[1.15fr_.72fr_.9fr_1.12fr] gap-x-10 gap-y-12 pb-12 max-[980px]:grid-cols-2 max-[980px]:gap-x-12 max-[980px]:gap-y-10 max-[520px]:grid-cols-1 max-[520px]:gap-y-9 max-[520px]:pb-9">
+          <div>
+            <Link
+              aria-label="Cuveroo home"
+              className="inline-flex items-center gap-3"
+              href="/"
+            >
+              <Image
+                alt=""
+                className="size-[52px] object-contain brightness-0 invert"
+                height={64}
+                src="/cuveroo-emblem.png"
+                width={64}
+              />
+              <span className="font-[Georgia,Times_New_Roman,serif] text-[22px] leading-none tracking-[.14em]">
+                CUVEROO
+              </span>
+            </Link>
+            <p className="mb-0 mt-5 max-w-[285px] text-[15px] leading-7 text-[#c6bdb2]">
+              Hand-finished copper, made with care in Morocco for the spaces we
+              call home.
+            </p>
+            <p className="mb-0 mt-5 text-[11px] font-semibold uppercase tracking-[.16em] text-[#9d623d]">
+              Made by hand. Made to last.
+            </p>
+          </div>
+
+          {footerLinks.map((group) => (
+            <nav aria-label={group.title} key={group.title}>
+              <h2 className="mb-5 mt-1 text-[13px] font-semibold tracking-[.01em] text-[#f8f5ef]">
+                {group.title}
+              </h2>
+              <ul className="m-0 grid list-none gap-[15px] p-0">
+                {group.links.map(([label, href]) => (
+                  <li key={label}>
+                    <Link
+                      className="group relative inline-block text-[14px] leading-6 text-[#c6bdb2] transition-colors duration-200 hover:text-[#e0ad83] focus-visible:text-[#e0ad83] after:absolute after:inset-x-0 after:-bottom-0.5 after:h-px after:origin-left after:scale-x-0 after:bg-[#e0ad83] after:transition-transform after:duration-200 after:content-[''] hover:after:scale-x-100 focus-visible:after:scale-x-100 motion-reduce:after:transition-none"
+                      href={href}
+                    >
+                      {label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+          ))}
+
+          <div>
+            <h2 className="mb-3 mt-1 text-[13px] font-semibold tracking-[.01em] text-[#f8f5ef]">
+              Keep in touch
+            </h2>
+            <p className="mb-5 mt-0 max-w-[300px] text-[14px] leading-6 text-[#c6bdb2]">
+              Have a question about a piece or a project? We’d be glad to hear
+              from you.
+            </p>
+            <Link
+              className="group flex min-h-[52px] max-w-[370px] items-center justify-between rounded-full border border-[#55483c] bg-[#302a24] py-1 pl-5 pr-1 text-[14px] text-[#ded5ca] transition-colors duration-200 hover:border-[#80634e] hover:bg-[#383129] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#d5a27c]"
+              href="/#contact"
+            >
+              <span>Contact Cuveroo</span>
+              <span className="grid size-11 place-items-center rounded-full bg-[#d5a27c] text-[#241f1a] transition-colors duration-200 group-hover:bg-[#e0ad83]">
+                <ArrowRight aria-hidden="true" size={18} />
+              </span>
+            </Link>
+          </div>
         </div>
-        {footerLinks.map((group) => (
-          <nav aria-label={group.title} key={group.title}>
-            <h2 className="mb-4 mt-0 text-[clamp(11px,0.78vw,13px)] uppercase tracking-[.16em] text-[#d5a27c]">{group.title}</h2>
-            <ul className="m-0 grid list-none gap-2.5 p-0">{group.links.map(([label, href]) => <li key={label}><Link className="text-[clamp(12px,0.85vw,14px)] text-[#d0c8be] transition-colors hover:text-[#d5a27c]" href={href}>{label}</Link></li>)}</ul>
-          </nav>
-        ))}
-        <div className="max-[700px]:col-span-full">
-          <p className="m-0 text-[clamp(11px,0.78vw,13px)] font-bold uppercase tracking-[.19em] text-[#d5a27c]">Keep in touch</p>
-          <h2 className="mb-[15px] mt-2.5 max-w-[240px] font-[Georgia,Times_New_Roman,serif] text-[25px] font-normal leading-[1.1]">Objects with a little more soul.</h2>
-          <Link className="inline-flex items-center gap-2 text-[clamp(12px,0.85vw,14px)] text-[#eee5d9] transition-colors hover:text-[#d5a27c]" href="/#contact">Contact Cuveroo <ArrowRight aria-hidden="true" size={15} /></Link>
+
+        <div className="flex items-center justify-between gap-4 border-t border-[#443a31] pt-6 text-[12px] text-[#b6aa9d] max-[520px]:flex-col max-[520px]:items-start max-[520px]:gap-2">
+          <span>
+            © <CurrentYear /> Cuveroo. All rights reserved.
+          </span>
+          <span>Objects for living · Crafted in Morocco</span>
         </div>
       </div>
-      <div className="flex justify-between gap-4 border-t border-white/15 pt-[17px] text-[clamp(11px,0.78vw,13px)] tracking-[.04em] text-[#aaa195]"><span>© 2026 Cuveroo</span><span>Objects for living</span></div>
+
+      <div
+        aria-hidden="true"
+        className="pointer-events-none relative z-0 mx-auto -mt-2 h-[clamp(90px,16vw,210px)] max-w-[1540px] overflow-hidden text-center"
+      >
+        <span className="absolute inset-x-0 bottom-[-.21em] whitespace-nowrap font-[Georgia,Times_New_Roman,serif] text-[clamp(96px,20vw,280px)] leading-[.82] tracking-[.035em] text-white/[.045]">
+          Cuveroo
+        </span>
+      </div>
+      <p className="mx-auto max-w-[1440px] px-6 py-4 text-center text-[12px] text-white/70 sm:px-8 lg:px-12">
+        Designed &amp; developed by{" "}
+        <a
+          href="https://www.stallionadvertising.ma/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="relative inline-block transition-colors duration-200 after:absolute after:inset-x-0 after:-bottom-0.5 after:h-px after:origin-left after:scale-x-0 after:bg-teal-300 after:transition-transform after:duration-200 after:content-[''] hover:text-teal-300 hover:after:scale-x-100 focus-visible:text-teal-300 focus-visible:after:scale-x-100 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-teal-300 motion-reduce:after:transition-none"
+        >
+          Stallion Advertising
+        </a>
+      </p>
     </footer>
   );
 }
