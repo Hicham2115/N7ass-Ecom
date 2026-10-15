@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useMemo, useState } from "react";
-import { ArrowRight, Check, ChevronDown, Heart, ShoppingBag, SlidersHorizontal, X } from "lucide-react";
+import { ArrowRight, ChevronDown, Heart, ShoppingBag, SlidersHorizontal, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Slider } from "@/components/ui/slider";
@@ -309,17 +309,19 @@ export function ProductsCatalog() {
               {visibleProducts.map((product) => (
                 <article className="group min-w-0" key={product.name}>
                   <div className="relative mb-2.5 aspect-square overflow-hidden bg-[#e8dfd3] max-[640px]:mb-2">
-                    <Image
-                      alt={product.alt}
-                      className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.035] motion-reduce:transition-none"
-                      fill
-                      sizes="(max-width: 640px) 46vw, (max-width: 900px) 30vw, 25vw"
-                      src={product.image}
-                    />
+                    <Link aria-label={`Voir ${product.name}`} className="absolute inset-0" href={`/products/${product.id}`}>
+                      <Image
+                        alt={product.alt}
+                        className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.035] motion-reduce:transition-none"
+                        fill
+                        sizes="(max-width: 640px) 46vw, (max-width: 900px) 30vw, 25vw"
+                        src={product.image}
+                      />
+                    </Link>
                     <button
                       aria-label={favorites.includes(product.id) ? `Retirer ${product.name} des favoris` : `Ajouter ${product.name} aux favoris`}
                       aria-pressed={favorites.includes(product.id)}
-                      className={`absolute right-3 top-3 grid size-10 place-items-center rounded-full transition-colors max-[640px]:right-2 max-[640px]:top-2 max-[640px]:size-9 ${favorites.includes(product.id) ? "bg-[#a9653e] text-white" : "bg-[#fcfaf6]/90 text-[#795237] hover:bg-white"}`}
+                      className={`absolute right-3 top-3 z-10 grid size-10 place-items-center rounded-full transition-colors max-[640px]:right-2 max-[640px]:top-2 max-[640px]:size-9 ${favorites.includes(product.id) ? "bg-[#a9653e] text-white" : "bg-[#fcfaf6]/90 text-[#795237] hover:bg-white"}`}
                       onClick={() => toggleFavorite(product.id)}
                       type="button"
                     >

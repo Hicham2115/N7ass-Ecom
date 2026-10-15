@@ -14,7 +14,6 @@ import {
   PackageCheck,
   Plus,
   Search,
-  ShieldCheck,
   ShoppingBag,
   Star,
   Truck,
@@ -65,11 +64,14 @@ function ProductPrice({ value }: { value: number }) {
   return <>{value.toLocaleString("fr-MA")} $</>;
 }
 
-function TrustNote({ icon: Icon, children }: { icon: typeof Hand; children: React.ReactNode }) {
+function TrustNote({ icon: Icon, title, text }: { icon: typeof Hand; title: string; text: string }) {
   return (
-    <div className="flex items-center gap-3 py-4 text-[13px] leading-[1.45] text-[#5e554c] max-[700px]:py-3 max-[700px]:text-[12px]">
-      <Icon aria-hidden="true" className="size-[21px] shrink-0 text-[#a9653e]" strokeWidth={1.5} />
-      <span>{children}</span>
+    <div className="flex items-center gap-4 px-5 py-4 first:pl-0 last:pr-0 max-[700px]:gap-3 max-[700px]:px-3 max-[700px]:py-3">
+      <Icon aria-hidden="true" className="size-6 shrink-0 text-[#a9653e] max-[700px]:size-5" strokeWidth={1.5} />
+      <div>
+        <p className="mb-1 mt-0 text-[14px] font-medium leading-tight text-[#342f2a] max-[700px]:text-[13px]">{title}</p>
+        <p className="m-0 text-[13px] leading-[1.45] text-[#756d64] max-[700px]:text-[12px]">{text}</p>
+      </div>
     </div>
   );
 }
@@ -225,10 +227,9 @@ export function ProductDetailPage({ product }: { product: Product }) {
               {saved ? "Ajouté à vos favoris" : "Ajouter à ma liste d’envies"}
             </button>
 
-            <div className="mt-5 grid grid-cols-3 divide-x divide-[#ddd4c7] border-y border-[#ddd4c7] max-[390px]:grid-cols-1 max-[390px]:divide-x-0 max-[390px]:divide-y">
-              <TrustNote icon={Hand}>Façonnée à la main au Maroc</TrustNote>
-              <TrustNote icon={Truck}>Livraison, détails confirmés avec notre équipe</TrustNote>
-              <TrustNote icon={ShieldCheck}>Une pièce pensée pour durer</TrustNote>
+            <div className="mt-5 grid grid-cols-2 divide-x divide-[#ddd4c7] border-y border-[#ddd4c7] max-[390px]:grid-cols-1 max-[390px]:divide-x-0 max-[390px]:divide-y">
+              <TrustNote icon={Hand} title="Fait main au Maroc" text="Chaque pièce est façonnée avec soin." />
+              <TrustNote icon={Truck} title="Livraison & suivi" text="Les détails sont confirmés avec notre équipe." />
             </div>
           </section>
         </div>
