@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 
 const footerLinks = [
@@ -11,8 +12,8 @@ export function Footer() {
     <footer className="site-footer">
       <div className="footer-main">
         <div className="footer-brand">
-          <Link className="brand-lockup footer-lockup" href="#home">
-            <span aria-hidden="true" className="mb-0 h-px w-8 bg-[#d5a27c]" />
+          <Link className="brand-lockup footer-lockup" href="#home" aria-label="Cuveroo home">
+            <Image className="footer-emblem" src="/cuveroo-emblem.png" alt="" width={64} height={64} />
             <span className="brand-name">CUVEROO</span>
           </Link>
           <p>Authentic copper.<br />Timeless design.</p>
