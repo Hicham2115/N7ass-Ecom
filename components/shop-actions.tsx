@@ -141,8 +141,8 @@ export function ShopActions() {
               <div className="border-t border-[#ddd4c7] pt-5">
                 <div className="mb-2 flex items-center justify-between text-sm"><span>Sous-total</span><strong className="font-semibold"><Price value={subtotal} /></strong></div>
                 <p className="mb-4 mt-0 text-xs leading-5 text-[#736e65]">Les frais de livraison et les détails seront confirmés avec votre commande.</p>
-                <Link className="group flex min-h-12 items-center justify-between bg-[#a9653e] px-4 text-[11px] font-semibold uppercase tracking-[.12em] text-white transition-colors hover:bg-[#77482d]" href="/#contact" onClick={() => setCartOpen(false)}>
-                  Une question sur votre commande ? <ArrowRight aria-hidden="true" className="transition-transform group-hover:translate-x-1" size={16} />
+                <Link className="group flex min-h-12 items-center justify-between bg-[#a9653e] px-4 text-[11px] font-semibold uppercase tracking-[.12em] !text-white transition-colors hover:bg-[#77482d]" href="/#contact" onClick={() => setCartOpen(false)}>
+                  Checkout <ArrowRight aria-hidden="true" className="text-white transition-transform group-hover:translate-x-1" size={16} />
                 </Link>
               </div>
             </>
