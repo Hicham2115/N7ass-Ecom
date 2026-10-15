@@ -37,7 +37,7 @@ export function SeasonalFeatureSection() {
           caractère et âme à votre intérieur.
         </p>
         <Link
-          className="inline-flex min-h-[52px] items-center justify-center gap-4 bg-[#b87343] px-7 text-[clamp(12px,0.85vw,14px)] font-bold uppercase tracking-[0.08em] text-white transition-colors hover:bg-[#985c35]"
+          className="inline-flex min-h-[52px] items-center justify-center gap-4 bg-[#b87343] px-7 text-[clamp(12px,0.85vw,14px)] font-bold uppercase tracking-[0.08em] !text-white transition-colors hover:bg-[#985c35]"
           href="#featured"
         >
           Explorer la sélection <ArrowRight aria-hidden="true" size={16} />

@@ -45,10 +45,11 @@ export function Hero() {
               aiment l’authenticité, le savoir-faire et la beauté durable.
             </p>
             <Link
-              className="inline-flex min-h-12 animate-[cuveroo-fade-up_850ms_cubic-bezier(.22,1,.36,1)_650ms_both] items-center justify-center gap-5 border border-[#b87343] bg-[#b87343] px-9 text-[clamp(12px,0.85vw,14px)] font-bold uppercase tracking-[.07em] text-white transition-colors hover:bg-[#985c35] motion-reduce:animate-none max-[700px]:px-6"
+              className="inline-flex min-h-12 animate-[cuveroo-fade-up_850ms_cubic-bezier(.22,1,.36,1)_650ms_both] items-center justify-center gap-5 border border-[#b87343] bg-[#b87343] px-9 text-[clamp(12px,0.85vw,14px)] font-bold uppercase tracking-[.07em] !text-white transition-colors hover:bg-[#985c35] motion-reduce:animate-none max-[700px]:px-6"
               href="#categories"
             >
-              Découvrir la collection <ArrowRight aria-hidden="true" size={16} />
+              Découvrir la collection{" "}
+              <ArrowRight aria-hidden="true" size={16} />
             </Link>
           </div>
         </div>

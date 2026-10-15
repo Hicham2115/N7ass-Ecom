@@ -12,13 +12,27 @@ export default function Home() {
   return (
     <main>
       <Hero />
-      <ScrollReveal><CategorySection /></ScrollReveal>
-      <ScrollReveal><SeasonalFeatureSection /></ScrollReveal>
-      <ScrollReveal><FeaturedProductsSection /></ScrollReveal>
-      <ScrollReveal><MaisonServicesSection /></ScrollReveal>
-      <ScrollReveal><ReviewsSection /></ScrollReveal>
-      <ScrollReveal><FaqSection /></ScrollReveal>
-      <ScrollReveal><ContactSection /></ScrollReveal>
+      <ScrollReveal>
+        <CategorySection />
+      </ScrollReveal>
+      <ScrollReveal>
+        <SeasonalFeatureSection />
+      </ScrollReveal>
+      <ScrollReveal>
+        <FeaturedProductsSection />
+      </ScrollReveal>
+      <ScrollReveal>
+        <MaisonServicesSection />
+      </ScrollReveal>
+      <ScrollReveal>
+        <ReviewsSection />
+      </ScrollReveal>
+      <ScrollReveal>
+        <FaqSection />
+      </ScrollReveal>
+      <ScrollReveal>
+        <ContactSection />
+      </ScrollReveal>
     </main>
   );
 }
