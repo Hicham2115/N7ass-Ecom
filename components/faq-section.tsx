@@ -54,7 +54,7 @@ export function FaqSection() {
               quelques réponses utiles.
             </p>
             <Link
-              className="group inline-flex min-h-[46px] items-center justify-center gap-[14px] border border-[#b87343] bg-[#b87343] px-5 text-[clamp(12px,0.85vw,14px)] font-bold uppercase tracking-[.07em] text-white transition-colors duration-200 hover:bg-[#985c35] active:scale-[.99]"
+              className="group inline-flex min-h-[46px] !text-white items-center justify-center gap-[14px] border border-[#b87343] bg-[#b87343] px-5 text-[clamp(12px,0.85vw,14px)] font-bold uppercase tracking-[.07em]  transition-colors duration-200 hover:bg-[#985c35] active:scale-[.99]"
               href="#contact"
             >
               Écrivez-nous{" "}

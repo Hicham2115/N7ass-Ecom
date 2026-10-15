@@ -133,8 +133,7 @@ export function ContactSection() {
 
           <div className="flex flex-wrap items-center gap-5 border-t border-[#ded8d0] pt-[clamp(30px,3.2vw,44px)]">
             <button
-              className="inline-flex min-h-[46px] min-w-[164px] items-center justify-center gap-4 bg-[#171614] px-6 font-sans text-[clamp(12px,0.82vw,13px)] font-medium uppercase tracking-[.07em] text-white shadow-[0_8px_22px_rgba(33,31,27,0.12)] transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#795237] disabled:cursor-not-allowed"
-              disabled
+              className="inline-flex min-h-[46px] cursor-pointer min-w-[164px] items-center justify-center gap-4 bg-[#171614] px-6 font-sans text-[clamp(12px,0.82vw,13px)] font-medium uppercase tracking-[.07em] text-white shadow-[0_8px_22px_rgba(33,31,27,0.12)] transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#795237] disabled:cursor-not-allowed"
               type="submit"
             >
               Envoyer ma demande <ArrowRight aria-hidden="true" size={16} />

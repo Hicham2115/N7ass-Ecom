@@ -329,7 +329,7 @@ export function ProductsCatalog() {
                   <div className="flex items-start justify-between gap-2">
                     <div className="min-w-0">
                       <h2 className="m-0 font-[Georgia,Times_New_Roman,serif] text-[clamp(17px,1.4vw,22px)] font-normal leading-[1.16] tracking-[-.025em] text-[#211f1b] max-[640px]:text-[16px]">
-                        <Link className="transition-colors hover:text-[#9c613b]" href="/#contact">{product.name}</Link>
+                        <Link className="transition-colors hover:text-[#9c613b]" href={`/products/${product.id}`}>{product.name}</Link>
                       </h2>
                       <p className="mb-0 mt-1.5 text-[9px] uppercase tracking-[.17em] text-[#84796e] max-[640px]:text-[8px]">{product.category}</p>
                       <p className="mb-0 mt-2 text-[13px] text-[#39342e] max-[640px]:mt-1.5 max-[640px]:text-[12px]">{product.price.toLocaleString("fr-MA")} $</p>

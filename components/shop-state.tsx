@@ -8,7 +8,7 @@ type SavedState = { cart: CartItem[]; favorites: string[] };
 type ShopContextValue = SavedState & {
   cartOpen: boolean;
   setCartOpen: (open: boolean) => void;
-  addToCart: (productId: string) => void;
+  addToCart: (productId: string, quantity?: number) => void;
   removeFromCart: (productId: string) => void;
   setCartQuantity: (productId: string, quantity: number) => void;
   toggleFavorite: (productId: string) => void;
@@ -65,15 +65,15 @@ export function ShopProvider({ children }: { children: React.ReactNode }) {
     }
   }, [cart, favorites, loaded]);
 
-  const addToCart = useCallback((productId: string) => {
+  const addToCart = useCallback((productId: string, quantity = 1) => {
     const product = catalogProducts.find((item) => item.id === productId);
-    if (!product || !product.inStock) return;
+    if (!product || !product.inStock || !Number.isInteger(quantity) || quantity < 1 || quantity > 99) return;
     setCart((current) => {
       const existing = current.find((item) => item.productId === productId);
       if (existing) {
-        return current.map((item) => item.productId === productId ? { ...item, quantity: item.quantity + 1 } : item);
+        return current.map((item) => item.productId === productId ? { ...item, quantity: item.quantity + quantity } : item);
       }
-      return [...current, { productId, quantity: 1 }];
+      return [...current, { productId, quantity }];
     });
     setCartOpen(true);
   }, []);

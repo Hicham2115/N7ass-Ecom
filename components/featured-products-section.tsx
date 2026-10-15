@@ -4,24 +4,28 @@ import { ArrowRight } from "lucide-react";
 
 const pieces = [
   {
+    id: "scallop-pendant",
     name: "Suspension festonnée en cuivre",
     description: "Texture martelée à la main et lumière douce et chaleureuse.",
     image: "/cu/pendant-scalloped.jpeg",
     imageClassName: "scale-[1.55] group-hover:scale-[1.62]",
   },
   {
+    id: "hammam-basin",
     name: "Vasque en cuivre martelé",
     description: "Une pièce sculpturale au cœur de votre salle de bain.",
     image: "/cu/basin-hammered.jpeg",
     imageClassName: "group-hover:scale-[1.04]",
   },
   {
+    id: "living-room-loop-pendant",
     name: "Suspension circulaire en cuivre",
     description: "Une silhouette affirmée et un savoir-faire artisanal.",
     image: "/cu/pendant-loop-room.png",
     imageClassName: "group-hover:scale-[1.04]",
   },
   {
+    id: "atlas-fire-bowl",
     name: "Brasero en cuivre",
     description: "Une pièce maîtresse pour vos moments en plein air.",
     image: "/cu/firebowl-outdoor.jpeg",
@@ -58,7 +62,7 @@ export function FeaturedProductsSection() {
           <article className="group" key={piece.name}>
             <Link
               className="relative mb-3 block aspect-square overflow-hidden bg-[#e8dfd3]"
-              href="#contact"
+              href={`/products/${piece.id}`}
               aria-label={`En savoir plus sur ${piece.name}`}
             >
               <Image
@@ -77,7 +81,7 @@ export function FeaturedProductsSection() {
             </p>
             <Link
               className="group/link mt-4 inline-flex items-center gap-3 text-[clamp(12px,0.85vw,14px)] font-medium uppercase tracking-[.07em] text-[#a66b45] transition-colors hover:text-[#211f1b] max-[700px]:mt-3 max-[700px]:text-[clamp(12px,0.85vw,14px)]"
-              href="#contact"
+              href={`/products/${piece.id}`}
             >
               Découvrir la pièce
               <ArrowRight aria-hidden="true" className="transition-transform group-hover/link:translate-x-1" size={14} />
