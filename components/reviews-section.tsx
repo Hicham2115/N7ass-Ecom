@@ -86,7 +86,7 @@ function Stars({ rating }: { rating: number }) {
 export function ReviewsSection() {
   return (
     <section
-      className="bg-[#fffdfa] px-[max(5vw,calc((100vw-1440px)/2))] py-12 text-[13px] text-[#28231f] max-[980px]:px-[6%] max-[700px]:px-[6%] max-[700px]:py-[42px]"
+      className="bg-[#fffdfa] px-[max(5vw,calc((100vw-1440px)/2))] py-12 text-[clamp(15px,1.05vw,17px)] text-[#28231f] max-[980px]:px-[6%] max-[700px]:px-[6%] max-[700px]:py-[42px]"
       id="journal"
       aria-labelledby="reviews-title"
     >
@@ -95,14 +95,14 @@ export function ReviewsSection() {
         <div className="flex flex-col items-start justify-center gap-[9px] border-r border-[#e6dfd6] pr-[25px] max-[700px]:pr-3">
           <strong className="text-[43px] font-bold leading-none max-[700px]:text-[32px]">{averageRating.toFixed(1)}</strong>
           <Stars rating={Math.round(averageRating)} />
-          <p className="m-0 text-[11px] text-[#82786d]">{reviewCount} customer reviews</p>
+          <p className="m-0 text-[clamp(13px,0.9vw,15px)] text-[#82786d]">{reviewCount} customer reviews</p>
         </div>
         <div
           className="grid content-center gap-[10px]"
           aria-label="Review ratings distribution"
         >
           {distribution.map(({ score, count }) => (
-            <div className="grid grid-cols-[32px_minmax(90px,1fr)_minmax(95px,.24fr)] items-center gap-3 text-[11px] text-[#736b62] max-[700px]:grid-cols-[25px_minmax(45px,1fr)] max-[700px]:gap-[7px]" key={score}>
+            <div className="grid grid-cols-[32px_minmax(90px,1fr)_minmax(95px,.24fr)] items-center gap-3 text-[clamp(13px,0.9vw,15px)] text-[#736b62] max-[700px]:grid-cols-[25px_minmax(45px,1fr)] max-[700px]:gap-[7px]" key={score}>
               <span className="font-semibold text-[#352f29]">{score}.0</span>
               <span className="h-[9px] overflow-hidden rounded-full bg-[#f0ece7]">
                 <span className="block h-full rounded-full bg-gradient-to-r from-[#a4653e] to-[#c99467]" style={{ width: `${(count / mostCommonRating) * 100}%` }} />
@@ -116,15 +116,15 @@ export function ReviewsSection() {
       </div>
       <div className="flex flex-wrap gap-2.5 border-b border-[#e6dfd6] pb-[25px]" aria-label="Review highlights">
         {["Craftsmanship", "Thoughtful design", "Hand-finished", "Made in Morocco"].map((highlight) => (
-          <span className="inline-flex min-h-[42px] items-center border border-[#e8e1d8] bg-white px-[14px] text-[11px] text-[#39332d] max-[700px]:min-h-[38px] max-[700px]:px-2.5 max-[700px]:text-[9px]" key={highlight}>{highlight}</span>
+          <span className="inline-flex min-h-[42px] items-center border border-[#e8e1d8] bg-white px-[14px] text-[clamp(13px,0.9vw,15px)] text-[#39332d] max-[700px]:min-h-[38px] max-[700px]:px-2.5 max-[700px]:text-[clamp(11px,0.78vw,13px)]" key={highlight}>{highlight}</span>
         ))}
       </div>
       <ReviewsCarousel reviews={reviews} />
       <div className="flex items-center justify-between gap-6 pt-[22px] max-[700px]:items-start max-[700px]:flex-col max-[700px]:gap-[18px]">
-        <p className="m-0 text-[11px] text-[#777067]">
+        <p className="m-0 text-[clamp(13px,0.9vw,15px)] text-[#777067]">
           Have a Cuveroo piece at home? <strong className="font-semibold text-[#29241f]">Share your experience.</strong>
         </p>
-        <Link className="group inline-flex items-center gap-[9px] border-b border-[#c9a487] pb-1.5 text-[10px] font-bold uppercase tracking-[.04em] text-[#593a27]" href="#contact">
+        <Link className="group inline-flex items-center gap-[9px] border-b border-[#c9a487] pb-1.5 text-[clamp(12px,0.85vw,14px)] font-bold uppercase tracking-[.04em] text-[#593a27]" href="#contact">
           Write a review <ArrowRight aria-hidden="true" className="text-[#b87343] transition-transform group-hover:translate-x-[3px]" size={16} />
         </Link>
       </div>

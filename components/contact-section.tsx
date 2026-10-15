@@ -1,144 +1,77 @@
-const services = ["Custom piece", "Wholesale", "Hospitality project", "Other"];
+import { ArrowRight } from "lucide-react";
 
 export function ContactSection() {
   return (
     <section
-      className="bg-[#fcfaf6] px-[max(5vw,calc((100vw-1440px)/2))] pb-16 pt-[clamp(44px,5vw,68px)] max-[980px]:px-[4%] max-[700px]:px-[5%] max-[700px]:pb-12"
-      id="contact"
       aria-labelledby="contact-title"
+      className="border-y border-[#e7ded3] bg-[#fcfaf6] px-[clamp(24px,7.2vw,150px)] pb-[clamp(72px,8vw,120px)] pt-[clamp(58px,7vw,96px)] max-[700px]:px-[6%] max-[700px]:pb-16 max-[700px]:pt-12"
+      id="contact"
     >
-      <div className="grid grid-cols-[minmax(220px,.7fr)_minmax(0,1.3fr)] gap-[clamp(32px,5vw,72px)] max-[700px]:grid-cols-1 max-[700px]:gap-8">
-        <aside className="flex flex-col gap-7 pt-1 text-[16px] leading-[1.65] text-[#655f58]">
-          <div className="mb-1">
-            <p className="m-0 text-[11px] font-bold uppercase tracking-[.16em] text-[#b87343]">
-              Let’s talk about your project
-            </p>
-            <h2
-              className="mb-0 mt-3 font-[Georgia,Times_New_Roman,serif] text-[clamp(52px,6vw,78px)] font-normal leading-[.98] tracking-[-.045em] text-[#211f1b] max-[700px]:text-[clamp(44px,10vw,60px)]"
-              id="contact-title"
+      <div className="mx-auto">
+        <p className="m-0 text-[clamp(12px,0.85vw,14px)] font-semibold uppercase tracking-[.19em] text-[#795237]">
+          <span className="mr-2 text-[#b87343]">/</span>Contact
+        </p>
+        <h2
+          className="mb-0 mt-7 max-w-[1120px] font-sans text-[clamp(40px,5vw,68px)] font-semibold leading-[1.05] tracking-[-.05em] text-[#171614] max-[700px]:mt-5 max-[700px]:text-[clamp(38px,9vw,52px)]"
+          id="contact-title"
+        >
+          A question? Write to <span className="text-[#a9653e]">us.</span>
+        </h2>
+
+        <form className="mt-[clamp(48px,7vw,106px)] grid gap-[clamp(34px,4.2vw,60px)]">
+          <label className="flex flex-wrap items-baseline gap-x-5 gap-y-2 font-sans text-[clamp(18px,1.45vw,24px)] leading-tight text-[#211f1b]">
+            <span>Hello, my name is</span>
+            <input
+              aria-label="Your name"
+              autoComplete="name"
+              className="h-[1.4em] min-w-[220px] flex-1 border-0 border-b-2 border-[#d3c9bd] bg-transparent px-1 text-[clamp(17px,1.35vw,22px)] font-normal text-[#211f1b] outline-none transition-colors duration-200 placeholder:text-[#aaa197] hover:border-[#b87343] max-[700px]:min-w-[160px]"
+              name="name"
+              placeholder="Your name"
+              required
+            />
+          </label>
+
+          <label className="flex flex-wrap items-baseline gap-x-5 gap-y-2 font-sans text-[clamp(18px,1.45vw,24px)] leading-tight text-[#211f1b]">
+            <span>You can reach us at</span>
+            <input
+              aria-label="Your email address"
+              autoComplete="email"
+              className="h-[1.4em] min-w-[220px] flex-1 border-0 border-b-2 border-[#d3c9bd] bg-transparent px-1 text-[clamp(17px,1.35vw,22px)] font-normal text-[#211f1b] outline-none transition-colors duration-200 placeholder:text-[#aaa197] hover:border-[#b87343] max-[700px]:min-w-[160px]"
+              name="email"
+              placeholder="you@example.com"
+              required
+              type="email"
+            />
+            <span aria-hidden="true" className="text-[#a9653e]">!</span>
+          </label>
+
+          <label className="grid gap-5 font-sans">
+            <span className="text-[clamp(12px,0.85vw,14px)] font-semibold uppercase tracking-[.17em] text-[#795237]">
+              Your message
+            </span>
+            <textarea
+              aria-label="Your message"
+              className="min-h-[clamp(130px,13vw,190px)] w-full resize-y border-0 border-b-2 border-[#d3c9bd] bg-transparent px-0 py-1 font-sans text-[clamp(16px,1.1vw,18px)] leading-[1.6] text-[#211f1b] outline-none placeholder:text-[#aaa197]"
+              name="message"
+              placeholder="How can we help?"
+              required
+              rows={4}
+            />
+          </label>
+
+          <div className="flex flex-wrap items-center gap-5 border-t border-[#ded8d0] pt-[clamp(36px,4vw,58px)]">
+            <button
+              className="inline-flex min-h-[64px] min-w-[220px] items-center justify-center gap-5 rounded-full bg-[#171614] px-8 font-sans text-[clamp(13px,0.9vw,15px)] font-medium uppercase tracking-[.08em] text-white shadow-[0_10px_30px_rgba(33,31,27,0.12)] transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#795237] disabled:cursor-not-allowed"
+              disabled
+              type="button"
             >
-              Contact <em className="text-[#b87343]">us</em>
-            </h2>
-          </div>
-          <div>
-            <p className="mb-2 mt-0 font-[Georgia,Times_New_Roman,serif] text-[22px] text-[#28231f]">
-              Cuveroo, Morocco
-            </p>
-            <p className="m-0">Handcrafted in Morocco</p>
-          </div>
-          <div>
-            <p className="mb-2 mt-0 text-[12px] font-bold uppercase tracking-[.12em] text-[#a4613a]">
-              We can help with
-            </p>
-            <p className="m-0">
-              Custom pieces
-              <br />
-              Wholesale orders
-              <br />
-              Hospitality projects
+              Send enquiry <ArrowRight aria-hidden="true" size={18} />
+            </button>
+            <p className="m-0 text-[clamp(13px,0.9vw,15px)] text-[#82786d]">
+              Online submissions are coming soon.
             </p>
           </div>
-          <p className="m-0 max-w-[330px] border-t border-[#d8cbbd] pt-5 text-[15px] leading-[1.75] text-[#736e65]">
-            Tell us a little about what you have in mind and we’ll help you find
-            the right next step.
-          </p>
-        </aside>
-
-        <div className="border-t border-[#d8cbbd] pt-4">
-          <h3 className="mb-5 mt-0 font-[Georgia,Times_New_Roman,serif] text-[26px] font-normal leading-tight text-[#28231f] max-[700px]:text-[23px]">
-            Tell us what you’re planning
-          </h3>
-          <form className="grid grid-cols-2 gap-x-6 gap-y-5 max-[400px]:grid-cols-1">
-            <fieldset className="col-span-full m-0 grid grid-cols-2 gap-x-5 gap-y-2 border-0 p-0 max-[400px]:col-span-1 max-[400px]:grid-cols-1">
-              <legend className="col-span-full mb-1 p-0 text-[12px] font-bold text-[#28231f]">
-                Name{" "}
-                <span className="font-normal text-[#9a6b4c]">(required)</span>
-              </legend>
-              <label className="grid gap-1 text-[12px] text-[#625b51]">
-                <span>First name</span>
-                <input
-                  className="h-9 border-0 border-b border-[#b9b0a5] bg-transparent px-0 text-[15px] text-[#211f1b] outline-none transition-colors placeholder:text-[#aaa197] focus:border-b-2 focus:border-[#a9653e]"
-                  autoComplete="given-name"
-                  name="firstName"
-                  required
-                />
-              </label>
-              <label className="grid gap-1 text-[12px] text-[#625b51]">
-                <span>Last name</span>
-                <input
-                  className="h-9 border-0 border-b border-[#b9b0a5] bg-transparent px-0 text-[15px] text-[#211f1b] outline-none transition-colors placeholder:text-[#aaa197] focus:border-b-2 focus:border-[#a9653e]"
-                  autoComplete="family-name"
-                  name="lastName"
-                  required
-                />
-              </label>
-            </fieldset>
-
-            <label className="col-span-full grid gap-1 text-[12px] font-semibold text-[#28231f] max-[400px]:col-span-1">
-              <span>Service</span>
-              <select
-                className="h-9 w-full appearance-none border-0 border-b border-[#b9b0a5] bg-transparent px-0 text-[15px] font-normal text-[#625b51] outline-none transition-colors focus:border-b-2 focus:border-[#a9653e]"
-                defaultValue=""
-                name="service"
-                required
-              >
-                <option disabled value="">
-                  Choose a service
-                </option>
-                {services.map((service) => (
-                  <option key={service} value={service}>
-                    {service}
-                  </option>
-                ))}
-              </select>
-            </label>
-
-            <label className="col-span-full grid gap-1 text-[12px] font-semibold text-[#28231f] max-[400px]:col-span-1">
-              <span>
-                Email{" "}
-                <span className="font-normal text-[#9a6b4c]">(required)</span>
-              </span>
-              <input
-                className="h-9 border-0 border-b border-[#b9b0a5] bg-transparent px-0 text-[15px] font-normal text-[#211f1b] outline-none transition-colors placeholder:text-[#aaa197] focus:border-b-2 focus:border-[#a9653e]"
-                autoComplete="email"
-                name="email"
-                required
-                type="email"
-              />
-            </label>
-
-            <label className="col-span-full flex items-center gap-2.5 text-[13px] text-[#736e65] max-[400px]:col-span-1">
-              <input
-                className="h-4 w-4 accent-[#a9653e]"
-                name="updates"
-                type="checkbox"
-              />
-              <span>Send me occasional news from Cuveroo</span>
-            </label>
-
-            <label className="col-span-full grid gap-1 text-[12px] font-semibold text-[#28231f] max-[400px]:col-span-1">
-              <span>Project description</span>
-              <textarea
-                className="min-h-[84px] w-full resize-y border-0 border-b border-[#b9b0a5] bg-transparent px-0 py-1 text-[15px] font-normal leading-relaxed text-[#211f1b] outline-none transition-colors placeholder:text-[#aaa197] focus:border-b-2 focus:border-[#a9653e]"
-                name="project"
-                rows={3}
-              />
-            </label>
-
-            <div className="col-span-full flex flex-wrap items-center gap-5 max-[400px]:col-span-1">
-              <button
-                className="inline-flex min-h-[48px] items-center justify-center border border-[#b87343] bg-[#b87343] px-6 text-[12px] font-bold uppercase tracking-[.07em] text-white transition-colors hover:bg-[#985c35] disabled:cursor-not-allowed disabled:opacity-65"
-                disabled
-                type="button"
-              >
-                Submit enquiry
-              </button>
-              <p className="m-0 text-[12px] text-[#82786d]">
-                Online submissions are coming soon.
-              </p>
-            </div>
-          </form>
-        </div>
+        </form>
       </div>
     </section>
   );

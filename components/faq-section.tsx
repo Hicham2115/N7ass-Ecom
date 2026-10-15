@@ -38,7 +38,7 @@ export function FaqSection() {
       <div className="grid grid-cols-1 items-start gap-10 md:grid-cols-[minmax(0,.82fr)_minmax(0,1.18fr)] md:gap-[clamp(42px,7vw,100px)]">
         <div className="flex flex-col items-start gap-8">
           <div className="max-w-[500px]">
-            <p className="m-0 text-[9px] font-bold uppercase tracking-[.19em] text-[#b87343]">
+            <p className="m-0 text-[clamp(11px,0.78vw,13px)] font-bold uppercase tracking-[.19em] text-[#b87343]">
               Good to know
             </p>
             <h2
@@ -54,7 +54,7 @@ export function FaqSection() {
               answers here.
             </p>
             <Link
-              className="group inline-flex min-h-[46px] items-center justify-center gap-[14px] border border-[#b87343] bg-[#b87343] px-5 text-[10px] font-bold uppercase tracking-[.07em] text-white transition-colors duration-200 hover:bg-[#985c35] active:scale-[.99]"
+              className="group inline-flex min-h-[46px] items-center justify-center gap-[14px] border border-[#b87343] bg-[#b87343] px-5 text-[clamp(12px,0.85vw,14px)] font-bold uppercase tracking-[.07em] text-white transition-colors duration-200 hover:bg-[#985c35] active:scale-[.99]"
               href="#contact"
             >
               Ask us directly{" "}
@@ -77,7 +77,7 @@ export function FaqSection() {
               key={question}
               open={index === 0}
             >
-              <summary className="flex min-h-[74px] cursor-pointer list-none items-center justify-between gap-5 text-[14px] font-semibold leading-[1.45] transition-colors hover:text-[#985c35] group-open:text-[#985c35] [&::-webkit-details-marker]:hidden max-[700px]:min-h-[66px] max-[700px]:gap-[14px] max-[700px]:text-[13px]">
+              <summary className="flex min-h-[74px] cursor-pointer list-none items-center justify-between gap-5 text-[14px] font-semibold leading-[1.45] transition-colors hover:text-[#985c35] group-open:text-[#985c35] [&::-webkit-details-marker]:hidden max-[700px]:min-h-[66px] max-[700px]:gap-[14px] max-[700px]:text-[clamp(15px,1.05vw,17px)]">
                 <span>{question}</span>
                 <span
                   className="grid h-[30px] w-[30px] flex-[0_0_30px] place-items-center border border-[#c9b9a8] text-[#655f58] transition-colors group-open:border-[#b87343] group-open:text-[#b87343]"
@@ -95,7 +95,7 @@ export function FaqSection() {
                   />
                 </span>
               </summary>
-              <p className="mb-6 mr-[50px] mt-[-1px] max-w-[610px] text-[13px] leading-[1.7] text-[#625c55] max-[700px]:mr-[40px]">
+              <p className="mb-6 mr-[50px] mt-[-1px] max-w-[610px] text-[clamp(15px,1.05vw,17px)] leading-[1.7] text-[#625c55] max-[700px]:mr-[40px]">
                 {answer}
               </p>
             </details>

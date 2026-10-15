@@ -26,18 +26,18 @@ export function MaisonServicesSection() {
       </div>
       <div className="grid grid-cols-[minmax(0,1fr)_minmax(150px,.55fr)] items-center gap-[clamp(22px,3vw,50px)] px-[clamp(30px,4vw,66px)] py-[42px] max-[1120px]:min-[701px]:grid-cols-1 max-[1120px]:min-[701px]:gap-6 max-[1120px]:min-[701px]:py-0 max-[700px]:grid-cols-1 max-[700px]:gap-[26px] max-[700px]:px-[7%] max-[700px]:pb-[42px] max-[700px]:pt-[38px]" id="story">
         <div className="min-w-0">
-          <p className="m-0 text-[9px] font-bold uppercase tracking-[.19em] text-[#d5a27c]">Wholesale & custom</p>
+          <p className="m-0 text-[clamp(11px,0.78vw,13px)] font-bold uppercase tracking-[.19em] text-[#d5a27c]">Wholesale & custom</p>
           <h2 className="mb-4 mt-[13px] font-[Georgia,Times_New_Roman,serif] text-[clamp(31px,3vw,44px)] font-normal leading-[1.03] tracking-[-.035em] max-[700px]:text-[clamp(34px,8vw,44px)]" id="services-title">
             Custom creations
             <br />
             for inspired spaces
           </h2>
-          <p className="m-0 max-w-[470px] text-[13px] leading-[1.7] text-[rgba(247,244,237,.7)]">
+          <p className="m-0 max-w-[470px] text-[clamp(15px,1.05vw,17px)] leading-[1.7] text-[rgba(247,244,237,.7)]">
             We collaborate with interior designers, architects and hospitality
             brands on custom pieces and wholesale orders, bringing your vision
             to life through authentic Moroccan craftsmanship.
           </p>
-          <Link className="group mt-[18px] inline-flex min-h-12 items-center justify-between gap-6 bg-[#b76d35] px-[19px] text-[10px] font-bold uppercase tracking-[.1em] text-[#fff8f0] transition-colors duration-200 hover:bg-[#985c35] active:scale-[.99] focus-visible:outline-[#d5a27c] focus-visible:outline-offset-4" href="#contact">
+          <Link className="group mt-[18px] inline-flex min-h-12 items-center justify-between gap-6 bg-[#b76d35] px-[19px] text-[clamp(12px,0.85vw,14px)] font-bold uppercase tracking-[.1em] text-[#fff8f0] transition-colors duration-200 hover:bg-[#985c35] active:scale-[.99] focus-visible:outline-[#d5a27c] focus-visible:outline-offset-4" href="#contact">
             <span>Enquire about wholesale</span>
             <ArrowRight aria-hidden="true" className="transition-transform group-hover:translate-x-[3px]" size={17} />
           </Link>
@@ -47,8 +47,8 @@ export function MaisonServicesSection() {
           <ol className="m-0 grid list-none gap-[15px] p-0 max-[1120px]:min-[701px]:grid-cols-3 max-[1120px]:min-[701px]:gap-[10px] max-[700px]:grid-cols-3">
             {craftSteps.map(({ number, title, detail }) => (
               <li className="grid grid-cols-[25px_1fr] items-start gap-[7px] max-[1120px]:min-[701px]:grid-cols-1 max-[1120px]:min-[701px]:gap-[5px] max-[700px]:grid-cols-1" key={number}>
-                <span className="pt-px text-[9px] tracking-[.05em] text-[#d5a27c]">{number}</span>
-                <div className="grid gap-[3px]"><strong className="text-[11px] font-semibold uppercase tracking-[.06em] text-[#eee2d5] max-[700px]:text-[9px]">{title}</strong><small className="text-[9px] leading-[1.4] text-[rgba(247,244,237,.58)]">{detail}</small></div>
+                <span className="pt-px text-[clamp(11px,0.78vw,13px)] tracking-[.05em] text-[#d5a27c]">{number}</span>
+                <div className="grid gap-[3px]"><strong className="text-[clamp(13px,0.9vw,15px)] font-semibold uppercase tracking-[.06em] text-[#eee2d5] max-[700px]:text-[clamp(11px,0.78vw,13px)]">{title}</strong><small className="text-[clamp(11px,0.78vw,13px)] leading-[1.4] text-[rgba(247,244,237,.58)]">{detail}</small></div>
               </li>
             ))}
           </ol>

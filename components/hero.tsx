@@ -28,7 +28,7 @@ export function Hero() {
             className="pointer-events-none absolute inset-[-30px] z-0 rounded-[45%] bg-[radial-gradient(ellipse_at_40%_50%,rgba(250,246,239,.92)_0%,rgba(250,246,239,.78)_54%,rgba(250,246,239,0)_100%)] blur-3xl"
           />
           <div className="relative z-10">
-            <p className="mb-0 animate-[cuveroo-fade-up_850ms_cubic-bezier(.22,1,.36,1)_120ms_both] text-[9px] font-bold uppercase leading-[1.7] tracking-[.19em] text-[#b87343] motion-reduce:animate-none max-[700px]:max-w-[250px]">
+            <p className="mb-0 animate-[cuveroo-fade-up_850ms_cubic-bezier(.22,1,.36,1)_120ms_both] text-[clamp(11px,0.78vw,13px)] font-bold uppercase leading-[1.7] tracking-[.19em] text-[#b87343] motion-reduce:animate-none max-[700px]:max-w-[250px]">
               Handcrafted for meaningful spaces
             </p>
             <h1
@@ -39,13 +39,13 @@ export function Hero() {
               <br />
               for Modern Living
             </h1>
-            <p className="mb-7 max-w-[440px] animate-[cuveroo-fade-up_900ms_cubic-bezier(.22,1,.36,1)_470ms_both] text-[13px] leading-[1.72] text-[#4c4842] motion-reduce:animate-none max-[700px]:mb-[19px] max-[700px]:max-w-[350px] max-[700px]:text-xs">
+            <p className="mb-7 max-w-[440px] animate-[cuveroo-fade-up_900ms_cubic-bezier(.22,1,.36,1)_470ms_both] text-[clamp(15px,1.05vw,17px)] leading-[1.72] text-[#4c4842] motion-reduce:animate-none max-[700px]:mb-[19px] max-[700px]:max-w-[350px] max-[700px]:text-[14px]">
               Artisanal lighting and home decor, meticulously handcrafted in
               Morocco. Created for homes and hospitality spaces that value
               authenticity, craftsmanship and lasting beauty.
             </p>
             <Link
-              className="inline-flex min-h-12 animate-[cuveroo-fade-up_850ms_cubic-bezier(.22,1,.36,1)_650ms_both] items-center justify-center gap-5 border border-[#b87343] bg-[#b87343] px-9 text-[10px] font-bold uppercase tracking-[.07em] text-white transition-colors hover:bg-[#985c35] motion-reduce:animate-none max-[700px]:px-6"
+              className="inline-flex min-h-12 animate-[cuveroo-fade-up_850ms_cubic-bezier(.22,1,.36,1)_650ms_both] items-center justify-center gap-5 border border-[#b87343] bg-[#b87343] px-9 text-[clamp(12px,0.85vw,14px)] font-bold uppercase tracking-[.07em] text-white transition-colors hover:bg-[#985c35] motion-reduce:animate-none max-[700px]:px-6"
               href="#categories"
             >
               Shop the collection <ArrowRight aria-hidden="true" size={16} />

@@ -20,17 +20,17 @@ export function Footer() {
         </div>
         {footerLinks.map((group) => (
           <nav aria-label={group.title} key={group.title}>
-            <h2 className="mb-4 mt-0 text-[9px] uppercase tracking-[.16em] text-[#d5a27c]">{group.title}</h2>
-            <ul className="m-0 grid list-none gap-2.5 p-0">{group.links.map(([label, href]) => <li key={label}><Link className="text-[10px] text-[#d0c8be] transition-colors hover:text-[#d5a27c]" href={href}>{label}</Link></li>)}</ul>
+            <h2 className="mb-4 mt-0 text-[clamp(11px,0.78vw,13px)] uppercase tracking-[.16em] text-[#d5a27c]">{group.title}</h2>
+            <ul className="m-0 grid list-none gap-2.5 p-0">{group.links.map(([label, href]) => <li key={label}><Link className="text-[clamp(12px,0.85vw,14px)] text-[#d0c8be] transition-colors hover:text-[#d5a27c]" href={href}>{label}</Link></li>)}</ul>
           </nav>
         ))}
         <div className="max-[700px]:col-span-full">
-          <p className="m-0 text-[9px] font-bold uppercase tracking-[.19em] text-[#d5a27c]">Keep in touch</p>
+          <p className="m-0 text-[clamp(11px,0.78vw,13px)] font-bold uppercase tracking-[.19em] text-[#d5a27c]">Keep in touch</p>
           <h2 className="mb-[15px] mt-2.5 max-w-[240px] font-[Georgia,Times_New_Roman,serif] text-[25px] font-normal leading-[1.1]">Objects with a little more soul.</h2>
-          <Link className="inline-flex items-center gap-2 text-[10px] text-[#eee5d9] transition-colors hover:text-[#d5a27c]" href="#contact">Contact Cuveroo <ArrowRight aria-hidden="true" size={15} /></Link>
+          <Link className="inline-flex items-center gap-2 text-[clamp(12px,0.85vw,14px)] text-[#eee5d9] transition-colors hover:text-[#d5a27c]" href="#contact">Contact Cuveroo <ArrowRight aria-hidden="true" size={15} /></Link>
         </div>
       </div>
-      <div className="flex justify-between gap-4 border-t border-white/15 pt-[17px] text-[9px] tracking-[.04em] text-[#aaa195]"><span>© 2026 Cuveroo</span><span>Objects for living</span></div>
+      <div className="flex justify-between gap-4 border-t border-white/15 pt-[17px] text-[clamp(11px,0.78vw,13px)] tracking-[.04em] text-[#aaa195]"><span>© 2026 Cuveroo</span><span>Objects for living</span></div>
     </footer>
   );
 }

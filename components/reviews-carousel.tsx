@@ -75,23 +75,23 @@ export function ReviewsCarousel({ reviews }: { reviews: Review[] }) {
           >
             <div className="mb-6 flex items-center justify-between gap-4">
               <div className="flex min-w-0 items-center gap-3">
-                <span className="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-[#98704f] text-[10px] font-bold text-[#fffaf5]" aria-hidden="true">
+                <span className="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-[#98704f] text-[clamp(12px,0.85vw,14px)] font-bold text-[#fffaf5]" aria-hidden="true">
                   {review.initials}
                 </span>
                 <div className="grid gap-1">
-                  <strong className="text-[12px] font-bold text-[#28231f]">{review.name}</strong>
-                  <span className="text-[10px] text-[#898178]">{review.date}</span>
+                  <strong className="text-[clamp(14px,1vw,16px)] font-bold text-[#28231f]">{review.name}</strong>
+                  <span className="text-[clamp(12px,0.85vw,14px)] text-[#898178]">{review.date}</span>
                 </div>
               </div>
               <div className="flex shrink-0 items-center gap-2">
-                <b className="text-[11px] text-[#28231f]">{review.rating}.0</b>
+                <b className="text-[clamp(13px,0.9vw,15px)] text-[#28231f]">{review.rating}.0</b>
                 <Stars rating={review.rating} />
               </div>
             </div>
             <p className="m-0 min-h-[94px] text-[14px] leading-[1.7] text-[#39342e] max-[700px]:min-h-0">
               “{review.text}”
             </p>
-            <div className="mt-6 flex items-center gap-2 border-t border-[#e6dfd6] pt-4 text-[9px] font-semibold uppercase tracking-[.13em] text-[#a4613a]">
+            <div className="mt-6 flex items-center gap-2 border-t border-[#e6dfd6] pt-4 text-[clamp(11px,0.78vw,13px)] font-semibold uppercase tracking-[.13em] text-[#a4613a]">
               <span className="h-1.5 w-1.5 rounded-full bg-[#b87343]" aria-hidden="true" />
               Cuveroo customer
             </div>
@@ -100,7 +100,7 @@ export function ReviewsCarousel({ reviews }: { reviews: Review[] }) {
       </div>
 
       <div className="mt-6 flex items-center justify-between border-t border-[#e6dfd6] pt-4">
-        <p className="m-0 text-[11px] text-[#736e65]">
+        <p className="m-0 text-[clamp(13px,0.9vw,15px)] text-[#736e65]">
           {String(page + 1).padStart(2, "0")} <span className="px-1 text-[#c2a58d]">/</span> {String(pageCount).padStart(2, "0")}
         </p>
         <div className="flex items-center gap-2">

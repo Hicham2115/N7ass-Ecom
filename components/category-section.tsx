@@ -49,7 +49,7 @@ export function CategorySection() {
             <ArrowRight size={11} strokeWidth={1.5} />
           </span>
           <h2
-            className="whitespace-nowrap font-sans text-[13px] font-medium uppercase tracking-[0.1em] text-[#211f1b] sm:text-[17px] sm:tracking-[0.12em]"
+            className="whitespace-nowrap font-sans text-[clamp(15px,1.05vw,17px)] font-medium uppercase tracking-[0.1em] text-[#211f1b] sm:text-[17px] sm:tracking-[0.12em]"
             id="categories-title"
           >
             Shop by category
@@ -60,7 +60,7 @@ export function CategorySection() {
           </span>
         </div>
         <Link
-          className="group col-start-3 inline-flex items-center justify-self-end gap-1.5 whitespace-nowrap text-[10px] font-semibold uppercase tracking-[0.08em] text-[#a76f49] transition-colors hover:text-[#211f1b]"
+          className="group col-start-3 inline-flex items-center justify-self-end gap-1.5 whitespace-nowrap text-[clamp(12px,0.85vw,14px)] font-semibold uppercase tracking-[0.08em] text-[#a76f49] transition-colors hover:text-[#211f1b]"
           href="#featured"
         >
           Explore all <MoveRight aria-hidden="true" className="transition-transform duration-200 group-hover:translate-x-1" size={14} strokeWidth={1.5} />
@@ -83,10 +83,10 @@ export function CategorySection() {
                 src={category.image}
               />
             </span>
-            <span className="mt-2 text-center font-sans text-[11px] font-semibold uppercase tracking-[0.04em] text-[#211f1b] sm:text-[12px] lg:text-[14px]">
+            <span className="mt-2 text-center font-sans text-[clamp(13px,0.9vw,15px)] font-semibold uppercase tracking-[0.04em] text-[#211f1b] sm:text-[clamp(14px,1vw,16px)] lg:text-[14px]">
               {category.name}
             </span>
-            <span className="mx-auto mt-1 max-w-[190px] text-center text-[10px] leading-[1.5] text-[#69645d] sm:text-[11px] lg:text-[12px]">
+            <span className="mx-auto mt-1 max-w-[190px] text-center text-[clamp(12px,0.85vw,14px)] leading-[1.5] text-[#69645d] sm:text-[clamp(13px,0.9vw,15px)] lg:text-[clamp(14px,1vw,16px)]">
               {category.note}
             </span>
           </Link>

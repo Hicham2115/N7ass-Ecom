@@ -2,7 +2,7 @@ const message = "Handcrafted copper · Made in Morocco · Timeless by design";
 
 function MessageGroup() {
   return (
-    <span className="flex shrink-0 items-center gap-7 px-6 text-[9px] font-semibold uppercase tracking-[0.19em] text-[#f7f2eb]">
+    <span className="flex shrink-0 items-center gap-7 px-6 text-[clamp(11px,0.78vw,13px)] font-semibold uppercase tracking-[0.19em] text-[#f7f2eb]">
       <span>{message}</span>
       <span aria-hidden="true" className="h-px w-7 bg-[#d5a27c]" />
       <span>{message}</span>
@@ -21,7 +21,7 @@ export function AnnouncementBar() {
           <MessageGroup />
         </span>
       </div>
-      <p className="m-0 hidden text-center text-[9px] font-semibold uppercase tracking-[0.19em] text-[#f7f2eb] motion-reduce:block">
+      <p className="m-0 hidden text-center text-[clamp(11px,0.78vw,13px)] font-semibold uppercase tracking-[0.19em] text-[#f7f2eb] motion-reduce:block">
         {message}
       </p>
     </div>

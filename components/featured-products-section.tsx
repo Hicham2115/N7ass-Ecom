@@ -46,7 +46,7 @@ export function FeaturedProductsSection() {
           <span aria-hidden="true" className="h-px w-12 bg-[#c39170] max-[700px]:w-7" />
         </h2>
         <Link
-          className="group absolute right-0 inline-flex items-center gap-2 text-[10px] font-medium uppercase tracking-[.07em] text-[#a66b45] transition-colors hover:text-[#211f1b] max-[700px]:static max-[700px]:self-end"
+          className="group absolute right-0 inline-flex items-center gap-2 text-[clamp(12px,0.85vw,14px)] font-medium uppercase tracking-[.07em] text-[#a66b45] transition-colors hover:text-[#211f1b] max-[700px]:static max-[700px]:self-end"
           href="#categories"
         >
           View all products
@@ -72,11 +72,11 @@ export function FeaturedProductsSection() {
             <h3 className="mb-1 mt-0 font-[Georgia,Times_New_Roman,serif] text-[clamp(16px,1.25vw,19px)] font-normal leading-tight tracking-[-.02em] text-[#211f1b] max-[700px]:text-[15px]">
               {piece.name}
             </h3>
-            <p className="mb-0 mt-1 max-w-[280px] text-[13px] leading-[1.55] text-[#5b554d] max-[700px]:text-xs">
+            <p className="mb-0 mt-1 max-w-[280px] text-[clamp(15px,1.05vw,17px)] leading-[1.55] text-[#5b554d] max-[700px]:text-xs">
               {piece.description}
             </p>
             <Link
-              className="group/link mt-4 inline-flex items-center gap-3 text-[10px] font-medium uppercase tracking-[.07em] text-[#a66b45] transition-colors hover:text-[#211f1b] max-[700px]:mt-3 max-[700px]:text-[10px]"
+              className="group/link mt-4 inline-flex items-center gap-3 text-[clamp(12px,0.85vw,14px)] font-medium uppercase tracking-[.07em] text-[#a66b45] transition-colors hover:text-[#211f1b] max-[700px]:mt-3 max-[700px]:text-[clamp(12px,0.85vw,14px)]"
               href="#contact"
             >
               View product
