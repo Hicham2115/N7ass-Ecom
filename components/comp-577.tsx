@@ -52,7 +52,6 @@ export default function Component() {
           href="#home"
           aria-label="Cuveroo home"
         >
-          <Image className="h-[34px] w-[34px] object-contain max-[700px]:h-[25px] max-[700px]:w-[25px]" src="/cuveroo-emblem.png" alt="" width={64} height={64} />
           CUVEROO
         </Link>
 
