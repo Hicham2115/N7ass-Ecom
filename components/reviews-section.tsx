@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ArrowRight, Star } from "lucide-react";
+import { ReviewsCarousel } from "@/components/reviews-carousel";
 
 const reviews = [
   {
@@ -118,28 +119,7 @@ export function ReviewsSection() {
           <span className="inline-flex min-h-[42px] items-center border border-[#e8e1d8] bg-white px-[14px] text-[11px] text-[#39332d] max-[700px]:min-h-[38px] max-[700px]:px-2.5 max-[700px]:text-[9px]" key={highlight}>{highlight}</span>
         ))}
       </div>
-      <div className="grid">
-        {reviews.map((review) => (
-          <article className="grid grid-cols-[39px_minmax(0,1fr)] gap-3 border-b border-[#e6dfd6] py-[23px] max-[700px]:grid-cols-[32px_minmax(0,1fr)] max-[700px]:gap-[9px] max-[700px]:py-[18px]" key={review.initials}>
-            <div className="grid h-[38px] w-[38px] place-items-center rounded-full bg-[#98704f] text-[9px] font-bold text-[#fffaf5] max-[700px]:h-8 max-[700px]:w-8" aria-hidden="true">
-              {review.initials}
-            </div>
-            <div>
-              <div className="flex items-center justify-between gap-5 max-[700px]:items-start">
-                <div className="flex items-baseline gap-2.5 max-[700px]:flex-col max-[700px]:gap-0.5">
-                  <strong className="text-[11px] font-bold">{review.name}</strong>
-                  <span className="text-[9px] text-[#898178]">{review.date}</span>
-                </div>
-                <div className="flex items-center gap-2.5 max-[700px]:gap-[5px]">
-                  <b className="text-[11px]">{review.rating}.0</b>
-                  <Stars rating={review.rating} />
-                </div>
-              </div>
-              <p className="mb-0 mt-[10px] text-[13px] leading-[1.65] text-[#39342e]">{review.text}</p>
-            </div>
-          </article>
-        ))}
-      </div>
+      <ReviewsCarousel reviews={reviews} />
       <div className="flex items-center justify-between gap-6 pt-[22px] max-[700px]:items-start max-[700px]:flex-col max-[700px]:gap-[18px]">
         <p className="m-0 text-[11px] text-[#777067]">
           Have a Cuveroo piece at home? <strong className="font-semibold text-[#29241f]">Share your experience.</strong>
