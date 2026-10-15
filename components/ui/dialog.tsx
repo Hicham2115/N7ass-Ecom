@@ -36,7 +36,7 @@ type DialogContentProps = React.ComponentProps<typeof DialogPrimitive.Content> &
 
 function DialogContent({ className, children, mobileSide = "bottom", ...props }: DialogContentProps) {
   const mobilePosition = mobileSide === "full"
-    ? "max-[640px]:inset-0 max-[640px]:h-full max-[640px]:max-h-full max-[640px]:w-full max-[640px]:max-w-none max-[640px]:rounded-none"
+    ? "!inset-0 !h-[100dvh] !w-screen !max-w-none !rounded-none"
     : mobileSide === "left"
     ? "max-[640px]:bottom-0 max-[640px]:left-0 max-[640px]:right-auto max-[640px]:top-0 max-[640px]:h-full max-[640px]:max-h-full max-[640px]:max-w-[min(86vw,380px)] max-[640px]:rounded-none max-[640px]:border-l-0 max-[640px]:border-r max-[640px]:border-t-0 max-[640px]:data-[state=closed]:slide-out-to-left max-[640px]:data-[state=open]:slide-in-from-left"
     : mobileSide === "right"
@@ -48,7 +48,7 @@ function DialogContent({ className, children, mobileSide = "bottom", ...props }:
       <DialogOverlay />
       <DialogPrimitive.Content
         className={cn(
-          "fixed right-0 top-0 z-50 flex h-full w-full max-w-[440px] flex-col border-l border-[#ddd4c7] bg-[#fcfaf6] p-7 text-[#211f1b] shadow-2xl outline-none data-[state=closed]:animate-out data-[state=closed]:slide-out-to-right data-[state=open]:animate-in data-[state=open]:slide-in-from-right sm:p-9",
+        "fixed right-0 top-0 z-[100] flex h-full w-full max-w-[440px] flex-col border-l border-[#ddd4c7] bg-[#fcfaf6] p-7 text-[#211f1b] shadow-2xl outline-none data-[state=closed]:animate-out data-[state=closed]:slide-out-to-right data-[state=open]:animate-in data-[state=open]:slide-in-from-right sm:p-9",
           mobilePosition,
           className,
         )}
