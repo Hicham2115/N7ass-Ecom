@@ -9,10 +9,10 @@ export type Product = {
   alt: string;
 };
 
-export const catalogCategories = ["Luminaires", "Art de la table", "Vasques", "Décoration murale", "Jardin & extérieur"];
+export const catalogCategories = ["Luminaires", "Art de la table", "Vasques", "Décoration murale", "Jardin & extérieur", "Poufs"];
 export const catalogRooms = ["Salon", "Salle à manger", "Cuisine", "Salle de bain", "Extérieur"];
 export const minimumPrice = 50;
-export const maximumPrice = 1200;
+export const maximumPrice = 1950;
 
 export const catalogProducts: Product[] = [
   { id: "scallop-pendant", name: "Suspension festonnée", category: "Luminaires", room: "Salon", price: 420, inStock: true, image: "/cu/pendant-scalloped.webp", alt: "Suspension festonnée en cuivre martelé à la main" },
@@ -29,4 +29,8 @@ export const catalogProducts: Product[] = [
   { id: "hand-hammered-planter", name: "Jardinière martelée à la main", category: "Jardin & extérieur", room: "Extérieur", price: 420, inStock: true, image: "/cu/copper-planter.webp", alt: "Jardinière en cuivre martelée à la main" },
   { id: "garden-fire-bowl", name: "Brasero de jardin", category: "Jardin & extérieur", room: "Extérieur", price: 1150, inStock: true, image: "/cu/firebowl-product.webp", alt: "Grand brasero en cuivre pour vos soirées en plein air" },
   { id: "living-room-loop-pendant", name: "Suspension anneau pour salon", category: "Luminaires", room: "Salon", price: 395, inStock: true, image: "/cu/pendant-loop-room.webp", alt: "Suspension en cuivre dans un intérieur à la lumière douce" },
+  { id: "sienna", name: "Sienna", category: "Poufs", room: "Salon", price: 1650, inStock: true, image: "/cu/stool-sienna.webp", alt: "Pouf Sienna en tissu taupe à motif ivoire avec pieds noirs" },
+  { id: "grano", name: "Grano", category: "Poufs", room: "Salon", price: 1650, inStock: true, image: "/cu/stool-grano.webp", alt: "Pouf Grano en tissu chiné noir et blanc avec pieds noirs" },
+  { id: "bianco", name: "Bianco", category: "Poufs", room: "Salon", price: 1650, inStock: true, image: "/cu/stool-bianco.webp", alt: "Pouf Bianco en tissu blanc et gris avec pieds en bois" },
+  { id: "vibora", name: "Vibora", category: "Poufs", room: "Salon", price: 1950, inStock: true, image: "/cu/stool-vibora.webp", alt: "Pouf Vibora en tissu noir et doré avec pieds noirs" },
 ];

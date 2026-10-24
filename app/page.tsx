@@ -7,11 +7,15 @@ import { MaisonServicesSection } from "@/components/maison-services-section";
 import { ReviewsSection } from "@/components/reviews-section";
 import { SeasonalFeatureSection } from "@/components/seasonal-feature-section";
 import { ScrollReveal } from "@/components/scroll-reveal";
+import { StoolProductsSection } from "@/components/stool-products-section";
 
 export default function Home() {
   return (
     <main>
       <Hero />
+      <ScrollReveal>
+        <StoolProductsSection />
+      </ScrollReveal>
       <ScrollReveal>
         <CategorySection />
       </ScrollReveal>

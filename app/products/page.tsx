@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import { ProductsCatalog } from "@/components/products-catalog";
 
 export const metadata: Metadata = {
-  title: "Nos services | T.cap",
-  description: "Découvrez les services d’aménagement intérieur et extérieur proposés par T.cap à Selouane, près de Nador.",
+  title: "Nos produits et services | T.cap",
+  description: "Découvrez notre collection de luminaires, objets décoratifs, mobilier et poufs.",
 };
 
 export default function ProductsPage() {

@@ -7,7 +7,7 @@ import { Dialog, DialogClose, DialogContent, DialogDescription, DialogTitle, Dia
 
 const navigationLinks = [
   { href: "/", label: "Accueil" },
-  { href: "/products", label: "Nos services" },
+  { href: "/services", label: "Nos services" },
   { href: "/#featured", label: "Réalisations" },
   { href: "/#story", label: "Notre méthode" },
   { href: "/#custom", label: "Sur mesure" },
@@ -16,6 +16,7 @@ const navigationLinks = [
 
 export default function Component() {
   const pathname = usePathname();
+  const isServicesPage = pathname === "/services" || pathname.startsWith("/services/") || pathname.startsWith("/products/");
 
   return (
     <header className="relative z-10 bg-[#f8f5ef]">
@@ -44,7 +45,7 @@ export default function Component() {
               <nav aria-label="Navigation mobile" className="mt-5 flex-1">
                 {navigationLinks.map((link, index) => (
                   <Link
-                    className={`group flex min-h-[58px] items-center justify-between border-b border-[#e5ddd2] py-3 text-[13px] font-semibold uppercase tracking-[.1em] transition-colors hover:text-[#b87343] ${((link.label === "Accueil" && pathname === "/") || (link.label === "Nos services" && pathname.startsWith("/products"))) ? "text-[#b87343]" : "text-[#302c26]"}`}
+                    className={`group flex min-h-[58px] items-center justify-between border-b border-[#e5ddd2] py-3 text-[13px] font-semibold uppercase tracking-[.1em] transition-colors hover:text-[#b87343] ${((link.label === "Accueil" && pathname === "/") || (link.label === "Nos services" && isServicesPage)) ? "text-[#b87343]" : "text-[#302c26]"}`}
                     href={link.href}
                     key={link.label}
                   >
@@ -77,7 +78,7 @@ export default function Component() {
         {navigationLinks.map((link) => (
           <Link
             className={
-              (link.label === "Accueil" && pathname === "/") || (link.label === "Nos services" && pathname.startsWith("/products"))
+              (link.label === "Accueil" && pathname === "/") || (link.label === "Nos services" && isServicesPage)
                 ? "relative flex min-h-[53px] items-center text-[clamp(12px,0.85vw,14px)] font-bold uppercase tracking-[.045em] text-[#b87343] transition-colors duration-200 after:absolute after:inset-x-0 after:bottom-[7px] after:h-0.5 after:origin-left after:bg-[#b87343] after:content-['']"
                 : "relative flex min-h-[53px] items-center text-[clamp(12px,0.85vw,14px)] font-bold uppercase tracking-[.045em] text-[#3e3b37] transition-colors duration-200 hover:text-[#b87343] after:absolute after:bottom-[7px] after:left-0 after:right-0 after:h-0.5 after:origin-left after:scale-x-0 after:bg-[#b87343] after:transition-transform after:duration-200 after:content-[''] hover:after:scale-x-100 focus-visible:after:scale-x-100 motion-reduce:transition-none motion-reduce:after:transition-none"
             }

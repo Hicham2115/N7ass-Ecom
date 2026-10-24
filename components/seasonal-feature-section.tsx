@@ -51,7 +51,7 @@ export function SeasonalFeatureSection() {
           >
             Demander un devis <ArrowRight aria-hidden="true" size={16} />
           </Link>
-          <Link className="group inline-flex min-h-[52px] items-center justify-center gap-3 border border-[#a9653e] bg-[#f7f4ed]/75 px-5 text-[12px] font-bold uppercase tracking-[.08em] text-[#795237] transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#a9653e] hover:text-white hover:shadow-[0_8px_20px_rgba(121,82,55,0.18)] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#9c613b]" href="/products">
+          <Link className="group inline-flex min-h-[52px] items-center justify-center gap-3 border border-[#a9653e] bg-[#f7f4ed]/75 px-5 text-[12px] font-bold uppercase tracking-[.08em] text-[#795237] transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#a9653e] hover:text-white hover:shadow-[0_8px_20px_rgba(121,82,55,0.18)] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#9c613b]" href="/services">
             Tous les services <ArrowRight aria-hidden="true" className="transition-transform group-hover:translate-x-1" size={15} />
           </Link>
         </div>

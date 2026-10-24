@@ -4,22 +4,30 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowRight, Check, ChevronRight, MapPin, Phone } from "lucide-react";
 import { services } from "@/lib/services";
+import { catalogProducts } from "@/lib/products";
+import { ProductDetailPage } from "@/components/product-detail-page";
 
 type Props = { params: Promise<{ id: string }> };
 
 export function generateStaticParams() {
-  return services.map(({ id }) => ({ id }));
+  return [...services, ...catalogProducts].map(({ id }) => ({ id }));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { id } = await params;
   const service = services.find((item) => item.id === id);
-  return { title: service ? `${service.name} | T.cap` : "Service | T.cap", description: service?.detail };
+  const product = catalogProducts.find((item) => item.id === id);
+  return {
+    title: service ? `${service.name} | T.cap` : product ? `${product.name} | T.cap` : "Article | T.cap",
+    description: service?.detail ?? product?.alt,
+  };
 }
 
 export default async function ServiceDetailPage({ params }: Props) {
   const { id } = await params;
   const service = services.find((item) => item.id === id);
+  const product = catalogProducts.find((item) => item.id === id);
+  if (!service && product) return <ProductDetailPage product={product} />;
   if (!service) notFound();
 
   const relatedServices = services.filter((item) => item.id !== service.id);
@@ -30,7 +38,7 @@ export default async function ServiceDetailPage({ params }: Props) {
         <nav aria-label="Fil d’Ariane" className="mb-6 flex flex-wrap items-center gap-2 text-[12px] text-[#756d64] max-[700px]:mb-4">
           <Link className="transition-colors hover:text-[#a9653e]" href="/">Accueil</Link>
           <ChevronRight aria-hidden="true" className="size-3.5 text-[#a18e7d]" />
-          <Link className="transition-colors hover:text-[#a9653e]" href="/products">Nos services</Link>
+          <Link className="transition-colors hover:text-[#a9653e]" href="/services">Nos services</Link>
           <ChevronRight aria-hidden="true" className="size-3.5 text-[#a18e7d]" />
           <span>{service.category}</span>
         </nav>
@@ -74,7 +82,7 @@ export default async function ServiceDetailPage({ params }: Props) {
         <section aria-labelledby="related-title" className="mt-14 max-[700px]:mt-10">
           <div className="mb-5 flex items-end justify-between gap-4">
             <div><p className="mb-2 mt-0 text-[10px] font-semibold uppercase tracking-[.17em] text-[#9c613b]">À découvrir</p><h2 className="m-0 font-[Georgia,Times_New_Roman,serif] text-[clamp(27px,3vw,38px)] font-normal tracking-[-.035em]" id="related-title">Autres services</h2></div>
-            <Link className="group mb-1 inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[.1em] text-[#795237] transition-colors hover:text-[#241f1a]" href="/products">Tous les services <ArrowRight aria-hidden="true" className="size-4 transition-transform group-hover:translate-x-1" /></Link>
+            <Link className="group mb-1 inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[.1em] text-[#795237] transition-colors hover:text-[#241f1a]" href="/services">Tous les services <ArrowRight aria-hidden="true" className="size-4 transition-transform group-hover:translate-x-1" /></Link>
           </div>
           <div className="grid grid-cols-3 gap-4 max-[700px]:grid-cols-2 max-[520px]:gap-3">
             {relatedServices.slice(0, 3).map((item) => (

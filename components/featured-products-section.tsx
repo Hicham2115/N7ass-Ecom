@@ -51,7 +51,7 @@ export function FeaturedProductsSection() {
         </h2>
         <Link
           className="group absolute right-0 inline-flex items-center gap-2 text-[clamp(12px,0.85vw,14px)] font-medium uppercase tracking-[.07em] text-[#a66b45] transition-colors hover:text-[#211f1b] max-[700px]:static max-[700px]:self-end"
-          href="/products"
+          href="/services"
         >
           Voir nos services
           <ArrowRight aria-hidden="true" className="transition-transform group-hover:translate-x-1" size={14} />

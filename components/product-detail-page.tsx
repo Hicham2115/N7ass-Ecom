@@ -57,12 +57,13 @@ function getDescription(product: Product) {
   if (product.id === "scallop-pendant") {
     return "Une suspension en cuivre martelé aux courbes festonnées, pensée pour diffuser une lumière douce et apporter du caractère à la pièce.";
   }
+  if (product.category === "Poufs") return product.alt;
 
   return `Une création en cuivre façonnée avec soin au Maroc. ${product.alt}.`;
 }
 
 function ProductPrice({ value }: { value: number }) {
-  return <>{value.toLocaleString("fr-MA")} $</>;
+  return <>{value.toLocaleString("fr-MA")} DH</>;
 }
 
 function TrustNote({ icon: Icon, title, text }: { icon: typeof Hand; title: string; text: string }) {
@@ -89,7 +90,7 @@ export function ProductDetailPage({ product }: { product: Product }) {
     () => catalogProducts.filter((item) => item.id !== product.id && item.category === product.category).slice(0, 3),
     [product.id, product.category],
   );
-  const title = product.name.toLocaleLowerCase("fr-MA").includes("cuivre")
+  const title = product.category === "Poufs" || product.name.toLocaleLowerCase("fr-MA").includes("cuivre")
     ? product.name
     : `${product.name} en cuivre`;
   const description = getDescription(product);
@@ -162,17 +163,17 @@ export function ProductDetailPage({ product }: { product: Product }) {
           </section>
 
           <section aria-labelledby="product-title" className="self-start pt-2 max-[700px]:pt-0">
-            <p className="mb-3 mt-0 text-[11px] font-semibold uppercase tracking-[.2em] text-[#a9653e]">Fait main au Maroc</p>
+            <p className="mb-3 mt-0 text-[11px] font-semibold uppercase tracking-[.2em] text-[#a9653e]">{product.category === "Poufs" ? "Assises en tissu" : "Fait main au Maroc"}</p>
             <h1 className="mb-0 mt-0 max-w-[610px] font-[Georgia,Times_New_Roman,serif] text-[clamp(34px,3.25vw,54px)] font-normal leading-[1.04] tracking-[-.045em] max-[700px]:max-w-[520px] max-[700px]:text-[clamp(34px,9vw,46px)]" id="product-title">
               {title}
             </h1>
 
-            <Link className="mt-4 inline-flex items-center gap-2 text-[13px] text-[#6f665d] transition-colors hover:text-[#a9653e]" href="/#journal">
+            {product.category !== "Poufs" && <Link className="mt-4 inline-flex items-center gap-2 text-[13px] text-[#6f665d] transition-colors hover:text-[#a9653e]" href="/#journal">
               <span aria-label="Note moyenne : 4,7 sur 5" className="flex items-center gap-0.5 text-[#b87343]">
                 {Array.from({ length: 5 }, (_, index) => <Star aria-hidden="true" className="size-[15px] fill-current" key={index} strokeWidth={1.5} />)}
               </span>
               4,7 · 7 avis Cuveroo
-            </Link>
+            </Link>}
 
             <p className="mb-0 mt-5 font-[Georgia,Times_New_Roman,serif] text-[29px] leading-none tracking-[-.025em] max-[700px]:mt-4 max-[700px]:text-[27px]">
               <ProductPrice value={product.price} />
@@ -183,10 +184,10 @@ export function ProductDetailPage({ product }: { product: Product }) {
             </p>
 
             <div className="mt-6">
-              <p className="mb-3 mt-0 text-[13px] font-medium text-[#342f2a]">Finition <span className="text-[#82786d]">· cuivre naturel</span></p>
+              <p className="mb-3 mt-0 text-[13px] font-medium text-[#342f2a]">{product.category === "Poufs" ? "Revêtement" : "Finition"} <span className="text-[#82786d]">· {product.category === "Poufs" ? "tissu à motifs" : "cuivre naturel"}</span></p>
               <div className="inline-flex items-center gap-2 border border-[#c98a62] bg-[#f8f1e9] px-3 py-2 text-[12px] text-[#4f4034]">
-                <span aria-hidden="true" className="size-4 rounded-full bg-[#a9653e] ring-1 ring-inset ring-[#784524]/40" />
-                Cuivre martelé
+                <span aria-hidden="true" className={`size-4 rounded-full ring-1 ring-inset ring-[#784524]/40 ${product.category === "Poufs" ? "bg-[#c5a680]" : "bg-[#a9653e]"}`} />
+                {product.category === "Poufs" ? "Tissu tissé" : "Cuivre martelé"}
                 <Check aria-hidden="true" className="ml-2 size-3.5 text-[#9c613b]" />
               </div>
             </div>
@@ -229,7 +230,7 @@ export function ProductDetailPage({ product }: { product: Product }) {
             </button>
 
             <div className="mt-5 grid grid-cols-2 divide-x divide-[#ddd4c7] border-y border-[#ddd4c7] max-[390px]:grid-cols-1 max-[390px]:divide-x-0 max-[390px]:divide-y">
-              <TrustNote icon={Hand} title="Fait main au Maroc" text="Chaque pièce est façonnée avec soin." />
+              <TrustNote icon={Hand} title={product.category === "Poufs" ? "Revêtement textile" : "Fait main au Maroc"} text={product.category === "Poufs" ? "Tissu à motifs et pieds sphériques." : "Chaque pièce est façonnée avec soin."} />
               <TrustNote icon={Truck} title="Livraison & suivi" text="Les détails sont confirmés avec notre équipe." />
             </div>
           </section>
@@ -265,14 +266,14 @@ export function ProductDetailPage({ product }: { product: Product }) {
                 </div>
                 <div className="grid content-start gap-3 text-[14px] text-[#665f57]">
                   <p className="m-0 flex items-center gap-3"><Check aria-hidden="true" className="size-4 text-[#a9653e]" /> {product.category}</p>
-                  <p className="m-0 flex items-center gap-3"><Check aria-hidden="true" className="size-4 text-[#a9653e]" /> Création façonnée à la main au Maroc</p>
+                  <p className="m-0 flex items-center gap-3"><Check aria-hidden="true" className="size-4 text-[#a9653e]" /> {product.category === "Poufs" ? "Assise d’appoint" : "Création façonnée à la main au Maroc"}</p>
                   <p className="m-0 flex items-center gap-3"><Check aria-hidden="true" className="size-4 text-[#a9653e]" /> Pensée pour {product.room.toLocaleLowerCase("fr-MA")}</p>
                 </div>
               </>
             )}
             {activeTab === "specifications" && (
               <dl className="col-span-2 m-0 grid grid-cols-2 gap-x-10 gap-y-4 text-[14px] max-[700px]:grid-cols-1">
-                {[["Matière", "Cuivre"], ["Fabrication", "Façonnée à la main au Maroc"], ["Finition", "Martelée, patine naturelle"], ["Pièce", product.room]].map(([label, value]) => (
+                {[["Matière", product.category === "Poufs" ? "Tissu tissé" : "Cuivre"], ["Fabrication", product.category === "Poufs" ? "—" : "Façonnée à la main au Maroc"], ["Finition", product.category === "Poufs" ? "Motif textile" : "Martelée, patine naturelle"], ["Pièce", product.room]].map(([label, value]) => (
                   <div className="flex justify-between gap-4 border-b border-[#e3dbd1] pb-3" key={label}>
                     <dt className="text-[#756d64]">{label}</dt><dd className="m-0 text-right text-[#332e28]">{value}</dd>
                   </div>
@@ -282,7 +283,7 @@ export function ProductDetailPage({ product }: { product: Product }) {
             {activeTab === "delivery" && (
               <div className="col-span-2 grid grid-cols-2 gap-8 max-[700px]:grid-cols-1 max-[700px]:gap-4">
                 <div className="flex gap-3"><Truck aria-hidden="true" className="mt-0.5 size-5 shrink-0 text-[#a9653e]" /><div><h3 className="mb-1 mt-0 text-[14px] font-medium">Livraison</h3><p className="m-0 text-[14px] leading-6 text-[#665f57]">Les modalités et frais de livraison sont confirmés par notre équipe avec votre commande.</p></div></div>
-                <div className="flex gap-3"><PackageCheck aria-hidden="true" className="mt-0.5 size-5 shrink-0 text-[#a9653e]" /><div><h3 className="mb-1 mt-0 text-[14px] font-medium">Une question ?</h3><p className="m-0 text-[14px] leading-6 text-[#665f57]">Nous vous accompagnons pour choisir la pièce et préparer votre projet.</p><Link className="mt-2 inline-flex items-center gap-2 text-[12px] font-semibold text-[#795237] underline underline-offset-4" href="/#contact">Écrire à Cuveroo <ArrowRight aria-hidden="true" className="size-3.5" /></Link></div></div>
+                <div className="flex gap-3"><PackageCheck aria-hidden="true" className="mt-0.5 size-5 shrink-0 text-[#a9653e]" /><div><h3 className="mb-1 mt-0 text-[14px] font-medium">Une question ?</h3><p className="m-0 text-[14px] leading-6 text-[#665f57]">Nous vous accompagnons pour choisir la pièce et préparer votre projet.</p><Link className="mt-2 inline-flex items-center gap-2 text-[12px] font-semibold text-[#795237] underline underline-offset-4" href="/#contact">Contacter T.cap <ArrowRight aria-hidden="true" className="size-3.5" /></Link></div></div>
               </div>
             )}
           </div>

@@ -44,7 +44,7 @@ export function ReviewsSection() {
         </div>
         <Link
           className="group inline-flex items-center gap-2 pb-1 text-[12px] font-bold uppercase tracking-[.06em] text-[#593a27]"
-          href="/products"
+          href="/services"
         >
           Voir les services{" "}
           <ArrowRight
