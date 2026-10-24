@@ -24,9 +24,9 @@ export default function Home() {
       <ScrollReveal>
         <MaisonServicesSection />
       </ScrollReveal>
-      <ScrollReveal>
+      {/* <ScrollReveal>
         <ReviewsSection />
-      </ScrollReveal>
+      </ScrollReveal> */}
       <ScrollReveal>
         <FaqSection />
       </ScrollReveal>
