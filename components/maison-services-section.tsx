@@ -21,7 +21,7 @@ export function MaisonServicesSection() {
           alt="Meuble mural et finitions intérieures réalisés sur mesure"
           fill
           sizes="(max-width: 700px) 100vw, 47vw"
-          src="/tcap-salon.png"
+          src="/tcap-salon.webp"
         />
       </div>
       <div className="grid grid-cols-[minmax(0,1fr)_minmax(150px,.55fr)] items-center gap-[clamp(22px,3vw,50px)] px-[clamp(30px,4vw,66px)] py-[42px] max-[1120px]:min-[701px]:grid-cols-1 max-[1120px]:min-[701px]:gap-6 max-[1120px]:min-[701px]:py-0 max-[700px]:grid-cols-1 max-[700px]:gap-[26px] max-[700px]:px-[7%] max-[700px]:pb-[42px] max-[700px]:pt-[38px]" id="story">

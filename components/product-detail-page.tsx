@@ -35,15 +35,15 @@ type DetailTab = "description" | "specifications" | "delivery";
 
 const scallopGallery: ProductImage[] = [
   {
-    src: "/cu/pendant-scalloped.jpeg",
+    src: "/cu/pendant-scalloped.webp",
     alt: "Suspension festonnée en cuivre martelé dans un intérieur lumineux",
   },
   {
-    src: "/cu/pendant-scalloped-room.png",
+    src: "/cu/pendant-scalloped-room.webp",
     alt: "Suspension festonnée au-dessus d’une table en pierre dans une salle à manger",
   },
   {
-    src: "/cu/pendant-scalloped-detail.png",
+    src: "/cu/pendant-scalloped-detail.webp",
     alt: "Détail du cuivre martelé et du bord festonné de la suspension",
   },
 ];

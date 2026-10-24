@@ -13,7 +13,7 @@ export function SeasonalFeatureSection() {
         className="object-cover object-center max-[700px]:hidden"
         fill
         sizes="100vw"
-        src="/tcap-kitchen-wall.png"
+        src="/tcap-kitchen-wall.webp"
       />
       <Image
         alt=""
@@ -21,7 +21,7 @@ export function SeasonalFeatureSection() {
         className="object-cover min-[701px]:hidden"
         fill
         sizes="100vw"
-        src="/tcap-kitchen.png"
+        src="/tcap-kitchen.webp"
       />
       <div
         aria-hidden="true"

@@ -15,7 +15,7 @@ export function Hero() {
         fill
         priority
         sizes="100vw"
-        src="/tcap-hero.png"
+        src="/tcap-hero.webp"
       />
       <Image
         alt=""
@@ -24,7 +24,7 @@ export function Hero() {
         fill
         priority
         sizes="100vw"
-        src="/tcap-hero.png"
+        src="/tcap-hero.webp"
       />
       <div
         aria-hidden="true"

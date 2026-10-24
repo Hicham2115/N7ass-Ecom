@@ -6,31 +6,31 @@ const categories = [
   {
     name: "Cuisines",
     note: "Agencements et rangements sur mesure",
-    image: "/tcap-kitchen.png",
+    image: "/tcap-kitchen.webp",
     alt: "Cuisine aménagée avec façades en bois et plan de travail clair",
   },
   {
     name: "Chambres",
     note: "Têtes de lit, rangements et habillage mural",
-    image: "/tcap-bedroom.png",
+    image: "/tcap-bedroom.webp",
     alt: "Chambre aménagée avec lits et papier peint mural",
   },
   {
     name: "Salons",
     note: "Ambiances modernes ou marocaines",
-    image: "/tcap-salon.png",
+    image: "/tcap-salon.webp",
     alt: "Salon contemporain aménagé avec mobilier sur mesure",
   },
   {
     name: "Finitions",
     note: "Carrelage, habillage et détails décoratifs",
-    image: "/tcap-hero.png",
+    image: "/tcap-hero.webp",
     alt: "Intérieur avec finitions murales et boiseries",
   },
   {
     name: "Extérieurs",
     note: "Volets roulants et aménagements extérieurs",
-    image: "/tcap-exterior.png",
+    image: "/tcap-exterior.webp",
     alt: "Façade et volet roulant motorisé",
   },
 ];

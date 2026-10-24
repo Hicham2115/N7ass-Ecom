@@ -6,19 +6,19 @@ const work = [
   {
     label: "Cuisine",
     detail: "MDF · finitions brillantes · plan de travail",
-    image: "/tcap-kitchen.png",
+    image: "/tcap-kitchen.webp",
     alt: "Cuisine aménagée aux finitions bois",
   },
   {
     label: "Chambre",
     detail: "Tête de lit · tissu · papier peint",
-    image: "/tcap-bedroom.png",
+    image: "/tcap-bedroom.webp",
     alt: "Chambre aménagée avec deux lits",
   },
   {
     label: "Salon",
     detail: "Mobilier · habillage · agencement",
-    image: "/tcap-salon.png",
+    image: "/tcap-salon.webp",
     alt: "Salon et meuble mural sur mesure",
   },
 ];
