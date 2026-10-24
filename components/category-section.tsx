@@ -4,34 +4,34 @@ import { ArrowLeft, ArrowRight, MoveRight } from "lucide-react";
 
 const categories = [
   {
-    name: "Luminaires",
-    note: "Suspensions, lampes à poser et plus encore",
-    image: "/cu/category-lighting.png",
-    alt: "Lampe à suspension en cuivre martelé et ajouré",
+    name: "Cuisines",
+    note: "Agencements et rangements sur mesure",
+    image: "/tcap-kitchen.png",
+    alt: "Cuisine aménagée avec façades en bois et plan de travail clair",
   },
   {
-    name: "Décoration murale",
-    note: "Des pièces de caractère pour vos murs",
-    image: "/cu/category-wall-decor.png",
-    alt: "Plaque murale en cuivre martelé et ornementé",
+    name: "Chambres",
+    note: "Têtes de lit, rangements et habillage mural",
+    image: "/tcap-bedroom.png",
+    alt: "Chambre aménagée avec lits et papier peint mural",
   },
   {
-    name: "Salle de bain",
-    note: "Vasques et accessoires pour un espace apaisant",
-    image: "/cu/category-bathroom.png",
-    alt: "Vasque en cuivre faite à la main avec robinet en laiton",
+    name: "Salons",
+    note: "Ambiances modernes ou marocaines",
+    image: "/tcap-salon.png",
+    alt: "Salon contemporain aménagé avec mobilier sur mesure",
   },
   {
-    name: "Art de la table",
-    note: "Sublimez les gestes du quotidien",
-    image: "/cu/category-tableware.png",
-    alt: "Vase et gobelet en cuivre martelé sur un plateau",
+    name: "Finitions",
+    note: "Carrelage, habillage et détails décoratifs",
+    image: "/tcap-hero.png",
+    alt: "Intérieur avec finitions murales et boiseries",
   },
   {
-    name: "Jardin & extérieur",
-    note: "Braseros et objets pour l’extérieur",
-    image: "/cu/category-garden.png",
-    alt: "Brasero en cuivre installé en plein air",
+    name: "Extérieurs",
+    note: "Volets roulants et aménagements extérieurs",
+    image: "/tcap-exterior.png",
+    alt: "Façade et volet roulant motorisé",
   },
 ];
 
@@ -52,7 +52,7 @@ export function CategorySection() {
             className="whitespace-nowrap font-sans text-[clamp(15px,1.05vw,17px)] font-medium uppercase tracking-[0.1em] text-[#211f1b] sm:text-[17px] sm:tracking-[0.12em]"
             id="categories-title"
           >
-            Nos univers
+            Nos services
           </h2>
           <span className="hidden items-center gap-1 text-[#b87343] sm:flex" aria-hidden="true">
             <ArrowLeft size={11} strokeWidth={1.5} />
@@ -63,7 +63,7 @@ export function CategorySection() {
           className="group col-start-3 inline-flex items-center justify-self-end gap-1.5 whitespace-nowrap text-[clamp(12px,0.85vw,14px)] font-semibold uppercase tracking-[0.08em] text-[#a76f49] transition-colors hover:text-[#211f1b]"
           href="/products"
         >
-          Tout découvrir <MoveRight aria-hidden="true" className="transition-transform duration-200 group-hover:translate-x-1" size={14} strokeWidth={1.5} />
+          Nos projets <MoveRight aria-hidden="true" className="transition-transform duration-200 group-hover:translate-x-1" size={14} strokeWidth={1.5} />
         </Link>
       </div>
 

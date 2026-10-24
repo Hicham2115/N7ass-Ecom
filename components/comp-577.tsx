@@ -1,17 +1,16 @@
 "use client";
 
 import Link from "next/link";
-import { ArrowRight, Menu, Search, X } from "lucide-react";
+import { ArrowRight, Menu, X } from "lucide-react";
 import { usePathname } from "next/navigation";
-import { ShopActions } from "@/components/shop-actions";
 import { Dialog, DialogClose, DialogContent, DialogDescription, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 
 const navigationLinks = [
   { href: "/", label: "Accueil" },
-  { href: "/products", label: "Boutique" },
-  { href: "/#featured", label: "Collection" },
-  { href: "/#story", label: "Notre atelier" },
-  { href: "/#custom", label: "Professionnels" },
+  { href: "/products", label: "Nos services" },
+  { href: "/#featured", label: "Réalisations" },
+  { href: "/#story", label: "Notre méthode" },
+  { href: "/#custom", label: "Sur mesure" },
   { href: "/#contact", label: "Contact" },
 ];
 
@@ -35,8 +34,8 @@ export default function Component() {
             <DialogContent aria-describedby="mobile-navigation-description" aria-label="Menu principal" className="hidden max-[700px]:flex" mobileSide="left">
               <div className="flex items-start justify-between border-b border-[#ddd4c7] pb-6">
                 <div>
-                  <DialogTitle className="text-[28px] tracking-[.12em]">CUVEROO</DialogTitle>
-                  <DialogDescription className="mt-2" id="mobile-navigation-description">L’art du cuivre, façonné au Maroc.</DialogDescription>
+                  <DialogTitle className="text-[28px] tracking-[.12em]">T.CAP</DialogTitle>
+                  <DialogDescription className="mt-2" id="mobile-navigation-description">Aménagement intérieur & extérieur · Nador</DialogDescription>
                 </div>
                 <DialogClose aria-label="Fermer le menu" className="grid size-10 place-items-center rounded-full border border-[#d9cec1] text-[#51473e] transition-colors hover:bg-[#f0e7dd]">
                   <X aria-hidden="true" size={19} />
@@ -45,7 +44,7 @@ export default function Component() {
               <nav aria-label="Navigation mobile" className="mt-5 flex-1">
                 {navigationLinks.map((link, index) => (
                   <Link
-                    className={`group flex min-h-[58px] items-center justify-between border-b border-[#e5ddd2] py-3 text-[13px] font-semibold uppercase tracking-[.1em] transition-colors hover:text-[#b87343] ${((link.label === "Accueil" && pathname === "/") || (link.label === "Boutique" && pathname.startsWith("/products"))) ? "text-[#b87343]" : "text-[#302c26]"}`}
+                    className={`group flex min-h-[58px] items-center justify-between border-b border-[#e5ddd2] py-3 text-[13px] font-semibold uppercase tracking-[.1em] transition-colors hover:text-[#b87343] ${((link.label === "Accueil" && pathname === "/") || (link.label === "Nos services" && pathname.startsWith("/products"))) ? "text-[#b87343]" : "text-[#302c26]"}`}
                     href={link.href}
                     key={link.label}
                   >
@@ -54,27 +53,21 @@ export default function Component() {
                   </Link>
                 ))}
               </nav>
-              <p className="border-t border-[#ddd4c7] pt-5 text-[10px] uppercase tracking-[.18em] text-[#8c7d6d]">Créations artisanales · Maroc</p>
+              <p className="border-t border-[#ddd4c7] pt-5 text-[10px] uppercase tracking-[.18em] text-[#8c7d6d]">Selouane · Nador</p>
             </DialogContent>
           </Dialog>
-          <Link
-            className="grid h-9 w-8 place-items-center text-[#48443f] transition-colors hover:text-[#b87343]"
-            href="/products"
-            aria-label="Parcourir les produits"
-          >
-            <Search aria-hidden="true" size={21} strokeWidth={1.8} />
-          </Link>
+          <span className="text-[10px] font-semibold uppercase tracking-[.12em] text-[#795237] max-[700px]:hidden">Selouane · Nador</span>
         </div>
 
         <Link
-          className="inline-flex w-max items-center justify-self-center gap-2 font-[Georgia,Times_New_Roman,serif] text-[34px] leading-none tracking-[.14em] text-[#211f1b] max-[700px]:gap-1.5 max-[700px]:text-[23px] max-[400px]:text-[20px]"
+          className="inline-flex w-max items-center justify-self-center gap-2 font-[Georgia,Times_New_Roman,serif] text-[34px] font-bold leading-none tracking-[.14em] text-[#211f1b] max-[700px]:gap-1.5 max-[700px]:text-[23px] max-[400px]:text-[20px]"
             href="/"
-          aria-label="Accueil Cuveroo"
+          aria-label="Accueil T.cap"
         >
-          CUVEROO
+          T.CAP
         </Link>
 
-        <ShopActions />
+        <Link className="justify-self-end bg-[#b87343] px-5 py-3 text-[11px] font-bold uppercase tracking-[.08em] text-white transition-colors hover:bg-[#985c35] max-[700px]:px-3 max-[700px]:py-2.5 max-[700px]:text-[9px]" href="/#contact">Demander un devis</Link>
       </div>
 
       <nav
@@ -84,7 +77,7 @@ export default function Component() {
         {navigationLinks.map((link) => (
           <Link
             className={
-              (link.label === "Accueil" && pathname === "/") || (link.label === "Boutique" && pathname.startsWith("/products"))
+              (link.label === "Accueil" && pathname === "/") || (link.label === "Nos services" && pathname.startsWith("/products"))
                 ? "relative flex min-h-[53px] items-center text-[clamp(12px,0.85vw,14px)] font-bold uppercase tracking-[.045em] text-[#b87343] transition-colors duration-200 after:absolute after:inset-x-0 after:bottom-[7px] after:h-0.5 after:origin-left after:bg-[#b87343] after:content-['']"
                 : "relative flex min-h-[53px] items-center text-[clamp(12px,0.85vw,14px)] font-bold uppercase tracking-[.045em] text-[#3e3b37] transition-colors duration-200 hover:text-[#b87343] after:absolute after:bottom-[7px] after:left-0 after:right-0 after:h-0.5 after:origin-left after:scale-x-0 after:bg-[#b87343] after:transition-transform after:duration-200 after:content-[''] hover:after:scale-x-100 focus-visible:after:scale-x-100 motion-reduce:transition-none motion-reduce:after:transition-none"
             }

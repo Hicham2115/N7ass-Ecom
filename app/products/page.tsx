@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import { ProductsCatalog } from "@/components/products-catalog";
 
 export const metadata: Metadata = {
-  title: "La collection | Cuveroo",
-  description: "Découvrez nos luminaires, objets de décoration et pièces d’extérieur en cuivre, fabriqués à la main au Maroc.",
+  title: "Nos services | T.cap",
+  description: "Découvrez les services d’aménagement intérieur et extérieur proposés par T.cap à Selouane, près de Nador.",
 };
 
 export default function ProductsPage() {

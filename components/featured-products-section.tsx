@@ -5,30 +5,30 @@ import { ArrowRight } from "lucide-react";
 const pieces = [
   {
     id: "scallop-pendant",
-    name: "Suspension festonnée en cuivre",
-    description: "Texture martelée à la main et lumière douce et chaleureuse.",
-    image: "/cu/pendant-scalloped.jpeg",
-    imageClassName: "scale-[1.55] group-hover:scale-[1.62]",
+    name: "Cuisine sur mesure",
+    description: "Façades MDF, finitions brillantes et plan de travail au choix.",
+    image: "/tcap-kitchen.png",
+    imageClassName: "group-hover:scale-[1.04]",
   },
   {
     id: "hammam-basin",
-    name: "Vasque en cuivre martelé",
-    description: "Une pièce sculpturale au cœur de votre salle de bain.",
-    image: "/cu/basin-hammered.jpeg",
+    name: "Chambre aménagée",
+    description: "Tête de lit, tissu et papier peint coordonnés.",
+    image: "/tcap-bedroom.png",
     imageClassName: "group-hover:scale-[1.04]",
   },
   {
     id: "living-room-loop-pendant",
-    name: "Suspension circulaire en cuivre",
-    description: "Une silhouette affirmée et un savoir-faire artisanal.",
-    image: "/cu/pendant-loop-room.png",
+    name: "Salon contemporain",
+    description: "Mobilier et habillage pensés pour votre pièce.",
+    image: "/tcap-salon.png",
     imageClassName: "group-hover:scale-[1.04]",
   },
   {
     id: "atlas-fire-bowl",
-    name: "Brasero en cuivre",
-    description: "Une pièce maîtresse pour vos moments en plein air.",
-    image: "/cu/firebowl-outdoor.jpeg",
+    name: "Volets roulants",
+    description: "Commande à distance et options domotiques.",
+    image: "/tcap-hero.png",
     imageClassName: "group-hover:scale-[1.04]",
   },
 ];
@@ -46,14 +46,14 @@ export function FeaturedProductsSection() {
           id="featured-title"
         >
           <span aria-hidden="true" className="h-px w-12 bg-[#c39170] max-[700px]:w-7" />
-          Pièces choisies
+          Projets à découvrir
           <span aria-hidden="true" className="h-px w-12 bg-[#c39170] max-[700px]:w-7" />
         </h2>
         <Link
           className="group absolute right-0 inline-flex items-center gap-2 text-[clamp(12px,0.85vw,14px)] font-medium uppercase tracking-[.07em] text-[#a66b45] transition-colors hover:text-[#211f1b] max-[700px]:static max-[700px]:self-end"
           href="/products"
         >
-          Voir toute la collection
+          Voir nos services
           <ArrowRight aria-hidden="true" className="transition-transform group-hover:translate-x-1" size={14} />
         </Link>
       </div>
@@ -62,7 +62,7 @@ export function FeaturedProductsSection() {
           <article className="group" key={piece.name}>
             <Link
               className="relative mb-3 block aspect-square overflow-hidden bg-[#e8dfd3]"
-              href={`/products/${piece.id}`}
+              href="#contact"
               aria-label={`En savoir plus sur ${piece.name}`}
             >
               <Image
@@ -81,9 +81,9 @@ export function FeaturedProductsSection() {
             </p>
             <Link
               className="group/link mt-4 inline-flex items-center gap-3 text-[clamp(12px,0.85vw,14px)] font-medium uppercase tracking-[.07em] text-[#a66b45] transition-colors hover:text-[#211f1b] max-[700px]:mt-3 max-[700px]:text-[clamp(12px,0.85vw,14px)]"
-              href={`/products/${piece.id}`}
+              href="#contact"
             >
-              Découvrir la pièce
+              Parler de ce projet
               <ArrowRight aria-hidden="true" className="transition-transform group-hover/link:translate-x-1" size={14} />
             </Link>
           </article>

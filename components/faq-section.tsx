@@ -3,29 +3,29 @@ import { ArrowRight, Minus, Plus } from "lucide-react";
 
 const questions = [
   {
-    question: "Que trouve-t-on dans la collection Cuveroo ?",
+    question: "Quels types de projets réalisez-vous ?",
     answer:
-      "Des luminaires, objets décoratifs, pièces pour la salle de bain et le spa, miroirs, décorations murales et objets de jardin.",
+      "T.cap présente des cuisines, chambres, salons, rangements, carrelage et finitions intérieures ou extérieures.",
   },
   {
-    question: "Puis-je demander une pièce sur mesure ?",
+    question: "Les aménagements sont-ils faits sur mesure ?",
     answer:
-      "Oui. Cuveroo réalise des pièces sur mesure. Décrivez-nous votre idée dans la section contact.",
+      "Les projets sont adaptés à l’espace et aux besoins du client. Contactez T.cap pour décrire votre projet et demander un devis.",
   },
   {
-    question: "Puis-je choisir une finition ou des dimensions ?",
+    question: "Puis-je choisir les matériaux et les finitions ?",
     answer:
-      "Les dimensions et les finitions possibles dépendent de la pièce. Parlez-nous de votre projet et nous vous guiderons parmi les options.",
+      "Les options dépendent du projet. Les publications montrent notamment du MDF, des finitions brillantes, des effets noyer, des plans de travail et du carrelage.",
   },
   {
-    question: "Travaillez-vous avec des professionnels et des revendeurs ?",
+    question: "Où se trouve T.cap ?",
     answer:
-      "Nous étudions les demandes des professionnels et les commandes en gros. Utilisez le formulaire de contact pour nous en parler.",
+      "Le profil indique la zone industrielle de Selouane, près de Nador. Contactez l’équipe pour confirmer le déplacement dans votre ville.",
   },
   {
-    question: "Comment entretenir une pièce en cuivre ?",
+    question: "Comment demander un devis ?",
     answer:
-      "L’entretien dépend de l’objet et de sa finition. Contactez Cuveroo pour obtenir des conseils adaptés à votre pièce.",
+      "Appelez le +212 661 872 150 ou envoyez votre demande via le formulaire en indiquant les dimensions et les finitions souhaitées.",
   },
 ];
 
@@ -50,8 +50,8 @@ export function FaqSection() {
           </div>
           <div className="max-w-[440px] border-t border-[#d9cfc0] pt-5">
             <p className="mb-5 mt-0 text-[14px] leading-[1.7] text-[#655f58]">
-              Du choix d’une finition à l’entretien du cuivre, retrouvez ici
-              quelques réponses utiles.
+              Retrouvez les premières informations sur nos services et la zone
+              d’intervention de T.cap.
             </p>
             <Link
               className="group inline-flex min-h-[46px] !text-white items-center justify-center gap-[14px] border border-[#b87343] bg-[#b87343] px-5 text-[clamp(12px,0.85vw,14px)] font-bold uppercase tracking-[.07em]  transition-colors duration-200 hover:bg-[#985c35] active:scale-[.99]"

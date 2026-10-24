@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import localFont from "next/font/local";
 import { Footer } from "@/components/footer";
 import { SmoothScroll } from "@/components/smooth-scroll";
 import { ShopProvider } from "@/components/shop-state";
@@ -7,20 +7,22 @@ import { Header } from "@/layout/header";
 import "lenis/dist/lenis.css";
 import "./globals.css";
 
-const geistSans = Geist({
+const geistSans = localFont({
+  src: "./fonts/geist-latin.woff2",
   variable: "--font-geist-sans",
-  subsets: ["latin"],
+  weight: "100 900",
 });
 
-const geistMono = Geist_Mono({
+const geistMono = localFont({
+  src: "./fonts/geist-mono-latin.woff2",
   variable: "--font-geist-mono",
-  subsets: ["latin"],
+  weight: "100 900",
 });
 
 export const metadata: Metadata = {
-  title: "Cuveroo — Le cuivre intemporel, façonné à la main",
+  title: "T.cap — Aménagement intérieur & extérieur",
   description:
-    "Découvrez les luminaires, pièces de bain et objets en cuivre façonnés à la main au Maroc par Cuveroo.",
+    "Cuisines sur mesure, chambres, salons et finitions intérieures à Nador et dans la région. T.cap aménage vos espaces selon votre projet.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
